@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contentw1: {
     fontFamily: 'Times New Roman, Times, serif',
-    fontSize:'10px'
+    fontSize:'10px',
     color:'#CICIC1',
     paddingLeft:"10px",
     paddingRight:"10px",

@@ -10,16 +10,19 @@ import Footer from "./components/Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: "100vh",
+    height:'700px',
     backgroundImage: `url(${cover})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     '@media screen and (max-width:480px)':{
-      backgroundSize: "cover",
-      minHeight: "70vh",
+      backgroundSize: "contain",
+      height:'700px',
+      marginBottom:'-500px'
     },
     '@media screen and (max-width:767px)':{
-      minHeight: "80vh",
+      backgroundSize: "contain",
+      height:'700px',
+      marginBottom:'-300px'
     },
   },
   container: {
