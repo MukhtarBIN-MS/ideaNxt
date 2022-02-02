@@ -43,8 +43,8 @@ const useStyles = makeStyles((theme) => ({
       paddingRight:"10px",
   },
   contentw1: {
-    fontFamily: 'Times New Roman, Times, serif',
-    fontSize:'10px',
+    fontFamily: 'nunito',
+    fontSize:'17px',
     color:'#CICIC1',
     paddingLeft:"10px",
     paddingRight:"10px",

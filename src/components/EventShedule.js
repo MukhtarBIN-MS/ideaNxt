@@ -32,16 +32,18 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     paddingLeft:'10px',
-    width: "150px",
-    height: "150px",
+    width: "130px",
+    height: "130px",
   },
   eventText: {
     fontFamily: "nunito",
     fontSize: "1 rem",
+    paddingLeft:'10px'
   },
   eventText1: {
     fontSize: "1 rem",
     fontFamily: "nunito",
+    paddingLeft:'10px'
   },
 }));
 
