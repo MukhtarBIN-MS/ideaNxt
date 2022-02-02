@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     '@media screen and (max-width:480px)':{
       fontSize:'20px',
       paddingLeft:'10px',
-      textAlign:'left'
+      textAlign:'center'
     }
   },
   eventsTitle: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     '@media screen and (max-width:480px)':{
       fontSize:'20px ',
       paddingLeft:'10px',
-      textAlign:'left'
+      textAlign:'center'
     }
   },
   list: {
@@ -43,7 +43,9 @@ const useStyles = makeStyles((theme) => ({
       paddingRight:"10px",
   },
   contentw1: {
-    fontFamily: "nunito",
+    fontFamily: 'Times New Roman, Times, serif',
+    fontSize:'10px'
+    color:'#CICIC1',
     paddingLeft:"10px",
     paddingRight:"10px",
   },
@@ -55,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
     background:'none',
     color:'#333',
    
-     textAlign:'justify',
-    marginBottom:'10px',
+     fontSize:'1 rem',
+    marginBottom:'5px',
     '@media screen and (max-width)':{
       border:'none',
       borderRadius:'none',
@@ -70,42 +72,36 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper2:{
     alignItems:'center',
     justifyContent:'center',
-    margin: "20px",
-    textAlign:'justify',
+    fontSize:'20px'
   },
   contentWrapper3:{
     background:'none',
-    textAlign:'justify',
+    fontSize:'20px',
     width:'auto 0',
-    margin: "20px",
-    paddingLeft:'10px'
+    marginLeft:'10px'
   },
   contentWrapper4:{
     background:'none',
-    textAlign:'justify',
+    fontSize:'20px',
     width:'auto 0',
-    margin: "20px",
     paddingLeft:'10px'
   },
   contentWrapper5:{
     background:'none',
-    textAlign:'justify',
+    fontSize:'20px',
     width:'auto 0',
-    margin: "20px",
     paddingLeft:'10px'
   },
   contentWrapper6:{
     background:'none',
-    textAlign:'justify',
+    fontSize:'20px',
     width:'auto 0',
-    margin: "20px",
     paddingLeft:'10px'
   },
   contentWrapper7:{
     background:'none',
-    textAlign:'justify',
+    fontSize:'20px',
     width:'auto 0',
-    margin: "20px",
     paddingLeft:'10px'
   },
 
@@ -116,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   },
   htitle: {
     padding: "10px",
-    fontSize:'1 rem',
+    fontSize:'17px',
     textAlign:'center',
     fontFamily: "Russo one",
     color: "#333",
@@ -203,7 +199,7 @@ export default function EventTitle() {
         <div id="eInfo" className={classes.all}>
         <div className={classes.contentWrapper2}>
         <img src={sidepic}  className={classes.dimage} alt="image" />
-          <h3 className={classes.contentw1}>
+          <p className={classes.contentw1}>
             2022 Abuja Expo (aka Abuja Innovation Fair 1.0) focuses on the
             ‌innovating companies and startups that are confronting the
             challenges posed by Covid-19. These challenges, both existential and
@@ -216,7 +212,7 @@ export default function EventTitle() {
             Satellite Technologies. These companies address a society that is
             remade by the COVID-19 pandemic and are pioneering business models
             that are now accelerating innovation-driven enterprise.
-          </h3>
+          </p>
         </div>
         <Grid className={classes.container} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 6, md: 12 }}>
         <Grid xs={4} className={classes.contentWrapper3}>
@@ -224,9 +220,9 @@ export default function EventTitle() {
             Nigerian Innovation-Driven Enterprise Summit Nigerian Universities
             Innovation Forum
           </h2>
-          <h3 className={classes.contentw1}>
-            <b>Innovation Town Hall Meetings The town hall meeting will feature a
-            wide range of topics that include:</b>
+         <p className={classes.contentw1}>
+            Innovation Town Hall Meetings The town hall meeting will feature a
+            wide range of topics that include:
              Digital Tax Administration (using
             tech innovation to drive Digital Tax collection and remittance) 5G
             and Brodband Satellite Communications, Semiconductor Technology and
@@ -234,37 +230,37 @@ export default function EventTitle() {
             AgricTech, Drone Technology (for disaster monitoring and
             management), Farmland Security Technologies, Renewable Energy
             Technologies, environmental tech and fintech.
-          </h3>
+          </p>
         </Grid>
         <Grid xs={3} className={classes.contentWrapper4}>
           <h2 className={classes.htitle}>
             Pitching <i class="fa fa-microphone" aria-hidden="true"></i>
           </h2>
-           <h3 className={classes.contentw1}>
+          <p className={classes.contentw1}>
             This fair provides the platform showcase your innovative ideas,
             products and services. It will also feature pitches from creative
             exhibitors working on unique solutions. Attendees will have the
             opportunity to network with industry experts, Investors, potential
             partners, distributors and agents, startup founders among others.
-          </h3>
+          </p>
         </Grid>
         <Grid xs={3} className={classes.contentWrapper4}>
           <h2 className={classes.htitle}>
           Networking & Collaboration <i class="fa fa-handshake-o" style={{ color: "#333" }} aria-hidden="true"
             ></i>
           </h2>
-           <h3 className={classes.contentw1}>
+          <p className={classes.contentw1}>
             The main goals of this event are to
             foster industrial R&D collaboration, explore business opportunities
             at the intersection innovation and technology, streamline technology
             exchange and transfer across various vertical, and promote
             innovation-driven enterprises for national economic recovery.
-          </h3>
+          </p>
         </Grid>
 
         <Grid xs={6} className={classes.contentWrapper5}>
           <h2 className={classes.htitle}>Showcasing <i class="fa fa-globe" aria-hidden="true"></i></h2>
-          <h3 className={classes.contentw1}>
+        <p className={classes.contentw1}>
             New Product Exhibition Launching new products and services requires
             branding, visibility, promotional campaigns and the right network.
             This is an opportunity to interact with your potential clients,
@@ -276,11 +272,11 @@ export default function EventTitle() {
             chance of winning the coveted IdeaNexT Academy Awards for best
             Innovation shaping our world. Various sub-awards endorsed by
             industry experts will give prestige to your business and team.
-          </h3>
+          </p>
        </Grid>
         <Grid xs={4} className={classes.contentWrapper7}>
           <h2 className={classes.htitle}>Vision <i class="fa fa-eye" aria-hidden="true"></i></h2>
-          <h3 className={classes.contentw1}>
+        <p className={classes.contentw1}>
             2022 Abuja Innovation Fair Seeks to bring together startups,
             multinationals, investors, incubators universities and polytechnics,
             research institutes, government agencies from Nigeria and overseas
@@ -288,7 +284,7 @@ export default function EventTitle() {
             pitching sessions, create a platform for networking among
             industries, corporations, academia, and startup ecosystems, and
             government.
-          </h3>
+          </p>
         </Grid>
      
         </Grid>
