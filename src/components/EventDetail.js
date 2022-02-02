@@ -129,7 +129,7 @@ export default function EventDetail(){
                   <Tickets 
                         ticketTitle="EMBASIS,TRADE PROMOTION AGENCIES"
                         ticketQuantity="Indoor pavilion only"
-                        ticketPrice="Cost is $1,200 per 9sqm with minimun of 72sqm"
+                        ticketPPrice="Cost is $1,200 per 9sqm with minimun of 72sqm"
                        
                        
                         ticketDLprice="$9,600"

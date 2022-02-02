@@ -52,12 +52,13 @@ export default function Tickets(props) {
 
         <h2> {props.ticketTitle}</h2>
         <h4> {props.ticketQuantity}</h4>
-        <h4><span>&#8358;</span>{props.ticketPrice}</h4>
+        <h4>&#8358;{props.ticketPrice}</h4>
+        <h4>{props.ticketPPrice}</h4>
         <h4>{props.ticketInfo}</h4>
         <hr/>
         <h3>*Vat Exclusive</h3>
         <h4 className={classes.left}>{props.ticketDLprice}</h4>
-        <h4 className={classes.left}><span>&#8358;</span>{props.ticketLprice}</h4>
+        <h4 className={classes.left}>&#8358;{props.ticketLprice}</h4>
       </CardContent>
       <CardActions>
         <Button className={classes.button} variant="outlined" size="small">Reserve now</Button>
