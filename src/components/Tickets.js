@@ -10,16 +10,26 @@ const useStyles = makeStyles((theme)=>({
     root:{
       border:'1px solid white',
       borderRadius:'7px',
+      paddingLeft:'10px',
       height:'350px',
-      
+      '@media screen and (max-width:767px)':{
+        paddingLeft:'10px'
+      }
       
     },
     card:{
       background:'snow',
-      width:'300px',
+      width:'250px',
       marginLeft:'10px',
+      paddingLeft:'10px',
       marginRight:'10px',
-      marginBottom:'30px'
+      marginBottom:'30px',
+      '@media screen and (max-width:767px)':{
+        marginLeft:'10px',
+        marginRight:'10px',
+        marginBottom:'30px',
+      }
+      
     },
     left:{
       textAlign:'right',

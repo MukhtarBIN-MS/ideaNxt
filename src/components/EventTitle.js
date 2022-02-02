@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/styles";
 import Grid from "@mui/material/Grid";
 import sidepic from "../Images/sidepic.jpg";
 import logo from "../Images/logo.png";
+import meet from "../Images/meet.png";
+import ind1 from "../Images/ind.png";
+import ind2 from "../Images/ind2.png";
 
 const useStyles = makeStyles((theme) => ({
   eventside: {
@@ -130,6 +133,17 @@ const useStyles = makeStyles((theme) => ({
       display:'none'
     },
   },
+  images:{
+   
+   
+    width:'300px',
+    height:'300px',
+    '@media screen and (max-width:480px)':{
+      alignItems:'center',
+      justifyContent:'center',
+      paddingLeft:'25px'
+    }
+  },
   dimage:{
     display:'block',
     alignItems:'center',
@@ -256,6 +270,9 @@ export default function EventTitle() {
             exchange and transfer across various vertical, and promote
             innovation-driven enterprises for national economic recovery.
           </p>
+          <Grid item xs={4}>
+        <img src={meet}  className={classes.images} alt="image" />
+        </Grid>
         </Grid>
 
         <Grid xs={6} className={classes.contentWrapper5}>
@@ -274,6 +291,12 @@ export default function EventTitle() {
             industry experts will give prestige to your business and team.
           </p>
        </Grid>
+       <Grid item xs={4}>
+        <img src={ind1}  className={classes.images} alt="image" />
+        </Grid>
+        <Grid item xs={4}>
+        <img src={ind2}  className={classes.images} alt="image" />
+        </Grid>
         <Grid xs={4} className={classes.contentWrapper7}>
           <h2 className={classes.htitle}>Vision <i class="fa fa-eye" aria-hidden="true"></i></h2>
         <p className={classes.contentw1}>
@@ -288,6 +311,8 @@ export default function EventTitle() {
         </Grid>
      
         </Grid>
+      
+        
       </div>
     </div>
   );
