@@ -46,6 +46,7 @@ export default function Tickets(props) {
         <h4>{props.ticketInfo}</h4>
         <hr/>
         <h3>*Vat Exclusive</h3>
+        <h4 className={classes.left}>{props.ticketDLprice}</h4>
         <h4 className={classes.left}><span>&#8358;</span>{props.ticketLprice}</h4>
       </CardContent>
       <CardActions>

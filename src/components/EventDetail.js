@@ -132,7 +132,7 @@ export default function EventDetail(){
                         ticketPrice="Cost is $1,200 per 9sqm with minimun of 72sqm"
                        
                        
-                        ticketLprice="$9,600"
+                        ticketDLprice="$9,600"
                         />
                     
                  </Grid>
