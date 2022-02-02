@@ -71,10 +71,10 @@ export default function EventDetail(){
                   <Tickets 
                         ticketTitle="FOR INDOOR SHELL SCHEME STANDS"
                         ticketQuantity="Quantity in 9sqm"
-                        ticketPrice="N25,000 per sqm"
+                        ticketPrice="25,000 per sqm"
                         ticketInfo="Payment covers: 1 tabel, 2 chairs, 1 spot light,
                         power point and fascial"
-                        ticketLprice="N225,000"
+                        ticketLprice="225,000"
                         />
                     
                  </Grid>
@@ -83,9 +83,9 @@ export default function EventDetail(){
                   <Tickets 
                         ticketTitle="OUTDOOR SPACCE Premium Area"
                         ticketQuantity="Quantity in 72sqm"
-                        ticketPrice="N20,000 per sqm"
+                        ticketPrice="20,000 per sqm"
                         ticketInfo="Space with power utility only"
-                        ticketLprice="N1,440,000"
+                        ticketLprice="1,440,000"
                         />
                     
                  </Grid>
@@ -96,7 +96,7 @@ export default function EventDetail(){
                         Organizer's DISCRETION"
                       
                        
-                        ticketLprice="N250,000"
+                        ticketLprice="250,000"
                         />
                     
                  </Grid>
@@ -105,10 +105,10 @@ export default function EventDetail(){
                   <Tickets 
                         ticketTitle="GOVERNMENT AGENCIES OUTDOOR SPACE"
                         ticketQuantity="Quantity in 45sqm"
-                        ticketPrice="N20,000 per sqm"
+                        ticketPrice="20,000 per sqm"
                        
                        
-                        ticketLprice="N900,000"
+                        ticketLprice="900,000"
                         />
                     
                  </Grid>
@@ -117,10 +117,10 @@ export default function EventDetail(){
                   <Tickets 
                         ticketTitle="GOVERNMENT AGENCIES INTDOOR SPACE"
                         ticketQuantity="Quantity in 36sqm"
-                        ticketPrice="N45,000 per sqm"
+                        ticketPrice="45,000 per sqm"
                        
                        
-                        ticketLprice="N1,620,000"
+                        ticketLprice="1,620,000"
                         />
                     
                  </Grid>
@@ -144,7 +144,7 @@ export default function EventDetail(){
                         ticketPrice="N25,000 per sqm"
                        
                        
-                        ticketLprice="$9,600"
+                        ticketLprice="1,045,000"
                         />
                     
                  </Grid>
