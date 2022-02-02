@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme)=>({
     eventsText:{
         fontFamily:'nunito',
         fontSize:'2 rem',
+        paddingLeft:'10px',
+        paddingRight:'10px',
         textAlign:'center',
         color:'white'
     },

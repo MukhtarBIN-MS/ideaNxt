@@ -15,15 +15,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     '@media screen and (max-width:480px)':{
-      backgroundSize: "contain",
-      height:'700px',
-      marginBottom:'-500px'
+      backgroundSize: "cover",
     },
-    '@media screen and (max-width:767px)':{
-      backgroundSize: "contain",
-      height:'700px',
-      marginBottom:'-300px'
-    },
+    
   },
   container: {
     justifyContent: "space-between",
