@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'nunito',
     fontSize:'17px',
     color:'#CICIC1',
-    paddingLeft:"10px",
+    paddingLeft:"15px",
     paddingRight:"10px",
   },
   contentWrapper1: {

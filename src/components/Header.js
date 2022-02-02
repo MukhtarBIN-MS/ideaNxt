@@ -52,13 +52,10 @@ const useStyles = makeStyles((theme) => ({
       },
       '@media screen and (max-width:767px)':{
         textAlign:'center',
-        padding:'2rem',
+        padding:'1.5rem',
         width:'100%',
         display:'table',
-        '&:hover':{
-          background:'white',
-          color:'black'
-        }
+       
       }
     },
     navbarlogo:{
@@ -100,9 +97,9 @@ const useStyles = makeStyles((theme) => ({
         display:'flex',
         flexDirection:'column',
         width:'50%',
-        height:'430px',
+        height:'280px',
         position:'absolute',
-        top:'80px',
+        top:'50px',
         listStyle:'none',
         textAlign:'center',
         justifyContent:'center',
