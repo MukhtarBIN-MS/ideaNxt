@@ -47,9 +47,11 @@ const useStyles = makeStyles((theme)=>({
         background:'linear-gradient(to right, #29467f, #101c32)',
         margin:'auto 0',
         border:'1px solid grey',
-       
-
-    }
+    },
+      '@media screen and (max-width:1115px)':{
+        paddingLeft:'10px',
+        width:'250px',
+      }
 
 }));
 

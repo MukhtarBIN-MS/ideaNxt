@@ -12,24 +12,23 @@ const useStyles = makeStyles((theme)=>({
       borderRadius:'7px',
       paddingLeft:'10px',
       height:'350px',
-      '@media screen and (max-width:767px)':{
+      '@media screen and (max-width:600px)':{
         paddingLeft:'10px'
+      },
+      '@media screen and (max-width:1115px)':{
+        marginLeft:'10px'
       }
       
     },
     card:{
       background:'snow',
-      width:'250px',
+      width:'auto',
       marginLeft:'10px',
       paddingLeft:'10px',
       marginRight:'10px',
       marginBottom:'30px',
-      '@media screen and (max-width:767px)':{
-        marginLeft:'10px',
-        marginRight:'10px',
-        marginBottom:'30px',
-      }
-      
+  
+  
     },
     left:{
       textAlign:'right',
@@ -39,6 +38,11 @@ const useStyles = makeStyles((theme)=>({
     button:{
       background:'green',
       color:'white'
+    },
+    text:{
+      '@media screen and (max-width:1115px)':{
+        fontSize:'15px',  
+      },
     }
  
  }))
@@ -48,13 +52,13 @@ export default function Tickets(props) {
   return (
     <Card className={classes.card}>
       <CardContent className={classes.root}>
-        <h2>{props.ticketName} </h2>
+        <h2 className={classes.text}>{props.ticketName} </h2>
 
-        <h2> {props.ticketTitle}</h2>
-        <h4> {props.ticketQuantity}</h4>
-        <h4>&#8358;{props.ticketPrice}</h4>
-        <h4>{props.ticketPPrice}</h4>
-        <h4>{props.ticketInfo}</h4>
+        <h2 className={classes.text}> {props.ticketTitle}</h2>
+        <h4 className={classes.text}> {props.ticketQuantity}</h4>
+        <h4 className={classes.text}>{props.ticketPrice}</h4>
+        <h4 className={classes.text}>{props.ticketPPrice}</h4>
+        <h4 className={classes.text}>{props.ticketInfo}</h4>
         <hr/>
         <h3>*Vat Exclusive</h3>
         <h4 className={classes.left}>{props.ticketDLprice}</h4>

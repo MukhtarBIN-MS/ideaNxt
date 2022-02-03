@@ -135,13 +135,13 @@ const useStyles = makeStyles((theme) => ({
   },
   images:{
    
-   
+   alignItems:'center',
     width:'300px',
     height:'300px',
     '@media screen and (max-width:480px)':{
       alignItems:'center',
       justifyContent:'center',
-      paddingLeft:'25px'
+     
     }
   },
   dimage:{
