@@ -141,6 +141,7 @@ const useStyles = makeStyles((theme) => ({
     '@media screen and (max-width:480px)':{
       alignItems:'center',
       justifyContent:'center',
+      paddingLeft:'55px'
      
     }
   },
