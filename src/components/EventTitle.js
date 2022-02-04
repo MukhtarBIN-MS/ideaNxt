@@ -346,11 +346,12 @@ export default function EventTitle() {
               business and team.
             </p>
             <Grid item xs={4}>
-            <img src={ind1} className={classes.images} alt="image" />
-          </Grid>
-          <Grid item xs={4}>
             <img src={ind2} className={classes.images} alt="image" />
           </Grid>
+            <Grid item xs={4}>
+            <img src={ind1} className={classes.images} alt="image" />
+          </Grid>
+          
           </Grid>
          
           <Grid xs={4} className={classes.contentWrapper7}>
