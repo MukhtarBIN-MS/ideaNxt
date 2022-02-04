@@ -9,7 +9,7 @@ import ind1 from "../Images/ind.png";
 import ind2 from "../Images/ind2.png";
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 
 
 const ExpandMore = ((props) => {
