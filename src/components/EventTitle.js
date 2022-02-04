@@ -7,8 +7,24 @@ import logo from "../Images/logo.png";
 import meet from "../Images/meet.png";
 import ind1 from "../Images/ind.png";
 import ind2 from "../Images/ind2.png";
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
+const ExpandMore = ((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
+
+
+  
 
 
 const useStyles = makeStyles((theme) => ({
@@ -184,7 +200,7 @@ const useStyles = makeStyles((theme) => ({
     "@media screen and (max-width:480px)": {
       alignItems: "center",
       justifyContent: "center",
-      paddingLeft: "25px",
+      paddingLeft: "20px",
     },
   },
   dimage: {
@@ -197,12 +213,29 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function EventTitle() {
+
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
  
   const classes = useStyles();
 
   return (
+    
     <div className={classes.Title}>
+   
       <div className={classes.eventside}>
+      <span
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        ></span>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <h2>Hy xrcytvubnijo;yftjvybuniogu</h2>
+      </Collapse>
         <h1 className={classes.eventTitle}>
           2022 Abuja Innovation Fair and Conference
         </h1>
