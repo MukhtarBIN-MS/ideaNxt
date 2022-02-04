@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Grid from "@mui/material/Grid";
 import sidepic from "../Images/sidepic.jpg";
@@ -7,105 +7,139 @@ import meet from "../Images/meet.png";
 import ind1 from "../Images/ind.png";
 import ind2 from "../Images/ind2.png";
 
+
 const useStyles = makeStyles((theme) => ({
   eventside: {
-   
     alignItems: "center",
     justifyContent: "center",
   },
   eventTitle: {
     fontFamily: "Russo One",
-  
+
     fontSize: "1 rem",
     textAlign: "center",
-    '@media screen and (max-width:480px)':{
-      fontSize:'20px',
-      paddingLeft:'10px',
-      textAlign:'center'
-    }
+    "@media screen and (max-width:480px)": {
+      fontSize: "20px",
+      paddingLeft: "10px",
+      textAlign: "center",
+    },
   },
   eventsTitle: {
-    fontFamily: "nunito",
-  
-    fontSize: "0.5 rem",
-    textAlign: "center",
-    '@media screen and (max-width:480px)':{
-      fontSize:'20px ',
-      paddingLeft:'10px',
-      textAlign:'center'
-    }
+    fontFamily: "Russo one",
+    color: "#000080",
+    fontSize: "17px",
+    textAlign: "justify",
+    "@media screen and (max-width:480px)": {
+      
+      paddingLeft: "10px",
+      textAlign: "center",
+    },
   },
   list: {
     listStyle: "none",
     fontFamily: "nunito",
   },
-  contentw11:{
-      fontFamily:'nunito',
-    
-      paddingLeft:"10px",
-      paddingRight:"10px",
+  contentw11: {
+    fontFamily: "nunito",
+    fontSize: "17px",
+    textAlign:'justify',
+    wordSpacing:'-2px',
+    paddingLeft: "10px",
+    paddingRight: "10px",
   },
   contentw1: {
-    fontFamily: 'nunito',
-    fontSize:'17px',
-    color:'#CICIC1',
-    paddingLeft:"15px",
-    paddingRight:"10px",
+    textAlign: "justify",
+    wordSpacing: "1px",
+    fontFamily: "nunito",
+    fontSize: "17px",
+    color: "#CICIC1",
+    paddingLeft: "15px",
+    paddingRight: "10px",
   },
   contentWrapper1: {
-    
-   background:'white',
-    display:'flex',
-    flexDirection:'row',
-    background:'none',
-    color:'#333',
-   
-     fontSize:'1 rem',
-    marginBottom:'5px',
-    '@media screen and (max-width)':{
-      border:'none',
-      borderRadius:'none',
+    background: "white",
+    display: "flex",
+    flexDirection: "row",
+    background: "none",
+    color: "#333",
+
+    fontSize: "1 rem",
+    marginBottom: "5px",
+    "@media screen and (max-width)": {
+      border: "none",
+      borderRadius: "none",
     },
-    
-    Title:{
-      background:'#ACADA8'
-    }
-   
+
+    Title: {
+      background: "#ACADA8",
+    },
   },
-  contentWrapper2:{
-    alignItems:'center',
-    justifyContent:'center',
-    fontSize:'20px'
+  contentWrapper2: {
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "20px",
   },
-  contentWrapper3:{
-    background:'none',
-    fontSize:'20px',
-    width:'auto 0',
-    marginLeft:'10px'
+  contentWrapper3: {
+    borderRadius: "10px",
+    marginTop: "20px",
+    marginLeft: "20px",
+    border: "1px solid lightgrey",
+    background: "#CCCDC6",
+    background: "none",
+    fontSize: "20px",
+    width: "auto 0",
+    marginLeft: "10px",
   },
-  contentWrapper4:{
-    background:'none',
-    fontSize:'20px',
-    width:'auto 0',
-    paddingLeft:'10px'
+  contentWrapper4: {
+    borderRadius: "10px",
+    marginTop: "20px",
+    marginLeft: "20px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    border: "1px solid lightgrey",
+    background: "#CCCDC6",
+    background: "none",
+    fontSize: "20px",
+    width: "auto 0",
+    paddingLeft: "10px",
   },
-  contentWrapper5:{
-    background:'none',
-    fontSize:'20px',
-    width:'auto 0',
-    paddingLeft:'10px'
+  contentWrapper5: {
+    borderRadius: "10px",
+    marginTop: "20px",
+    marginLeft: "20px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    border: "1px solid lightgrey",
+    background: "#CCCDC6",
+    background: "none",
+    fontSize: "20px",
+    width: "auto 0",
+    paddingLeft: "10px",
   },
-  contentWrapper6:{
-    background:'none',
-    fontSize:'20px',
-    width:'auto 0',
-    paddingLeft:'10px'
+  contentWrapper6: {
+    borderRadius: "10px",
+    marginTop: "20px",
+    marginLeft: "20px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    border: "1px solid lightgrey",
+    background: "#CCCDC6",
+    background: "none",
+    fontSize: "20px",
+    width: "auto 0",
+    paddingLeft: "10px",
   },
-  contentWrapper7:{
-    background:'none',
-    fontSize:'20px',
-    width:'auto 0',
-    paddingLeft:'10px'
+  contentWrapper7: {
+    borderRadius: "10px",
+    marginTop: "20px",
+    marginLeft: "20px",
+    marginRight: "10px",
+    border: "1px solid lightgrey",
+    background: "#CCCDC6",
+    background: "none",
+    fontSize: "20px",
+    width: "auto 0",
+    paddingLeft: "10px",
   },
 
   all: {
@@ -115,66 +149,60 @@ const useStyles = makeStyles((theme) => ({
   },
   htitle: {
     padding: "10px",
-    fontSize:'17px',
-    textAlign:'center',
+    fontSize: "17px",
+    textAlign: "center",
     fontFamily: "Russo one",
     color: "#333",
   },
-  image:{
-    objectFit:'cover',
-    alignItems:'center',
-    justifyContent:'center',
-    width:'700px',
-    height:'700px',
-    '@media screen and (max-width:480px)':{
-      display:'none'
+  image: {
+    objectFit: "cover",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "700px",
+    height: "700px",
+    "@media screen and (max-width:480px)": {
+      display: "none",
     },
-     '@media screen and (max-width:767px)':{
-      display:'none'
+    "@media screen and (max-width:767px)": {
+      display: "none",
     },
   },
-  images:{
-   
-   alignItems:'center',
-    width:'300px',
-    height:'300px',
-    '@media screen and (max-width:480px)':{
-      alignItems:'center',
-      justifyContent:'center',
-      paddingLeft:'37px'
-     
-    }
+  images: {
+    alignItems: "center",
+    width: "300px",
+    height: "300px",
+    "@media screen and (max-width:480px)": {
+      alignItems: "center",
+      justifyContent: "center",
+      paddingLeft: "30px",
+    },
   },
-  dimage:{
-    display:'block',
-    alignItems:'center',
-    justifyContent:'center',
-    width:'300px',
-    height:'300px',
-
-  }
-
+  dimage: {
+    display: "block",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "300px",
+    height: "300px",
+  },
 }));
 
 export default function EventTitle() {
   const classes = useStyles();
   return (
     <div className={classes.Title}>
-    <div className={classes.eventside}>
-      <h1 className={classes.eventTitle}>
-        2022 IdeaNexT<span>&#174;</span>Abuja Expo & Confernce (innovation fair)
-      </h1>
-      <h3 className={classes.eventsTitle}>
-        1st ideaNext<span>&#174;</span> International Innovations Trade fair
-      </h3>
-      <h4 className={classes.eventsTitle}>
-        Exploring opportunities at the convergence of Innovations, Business and
-        Technologies
-      </h4>
-      
+      <div className={classes.eventside}>
+        <h1 className={classes.eventTitle}>
+          2022 Abuja Innovation Fair and Conference
+        </h1>
+
+        <h4 className={classes.eventsTitle}>
+          Exploring opportunities at the convergence of Innovations, Business
+          and Technologies
+        </h4>
+
         <div container className={classes.contentWrapper1}>
-        <Grid item xs={12} lg={6}>
-            <h3 className={classes.contentw11}>
+          <Grid item xs={12} lg={6}>
+            <p className={classes.contentw11}>
               Welcome to the Maiden Edition of Abuja Innovation Fair, a leading
               innovation event in Nigeria. Abuja Expo@ will be held at
               internation conference center, Abuja and Nile University of
@@ -204,16 +232,16 @@ export default function EventTitle() {
               for national economic recovery, growth and transformation. We look
               forward to seeing you in March and to showcase innovations shaping
               our world!
-            </h3>
-            </Grid>
-            <Grid item lg={6}>
-            <img src={sidepic}  className={classes.image} alt="image" />
-            </Grid>
+            </p>
+          </Grid>
+          <Grid item lg={6}>
+            <img src={sidepic} className={classes.image} alt="image" />
+          </Grid>
         </div>
-        </div>
-        <div id="eInfo" className={classes.all}>
+      </div>
+      <div id="eInfo" className={classes.all}>
         <div className={classes.contentWrapper2}>
-        <img src={sidepic}  className={classes.dimage} alt="image" />
+          <img src={sidepic} className={classes.dimage} alt="image" />
           <p className={classes.contentw1}>
             2022 Abuja Expo (aka Abuja Innovation Fair 1.0) focuses on the
             ‌innovating companies and startups that are confronting the
@@ -229,91 +257,103 @@ export default function EventTitle() {
             that are now accelerating innovation-driven enterprise.
           </p>
         </div>
-        <Grid className={classes.container} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 6, md: 12 }}>
-        <Grid xs={4} className={classes.contentWrapper3}>
-          <h2 className={classes.htitle}>
-            Nigerian Innovation-Driven Enterprise Summit Nigerian Universities
-            Innovation Forum
-          </h2>
-         <p className={classes.contentw1}>
-            Innovation Town Hall Meetings The town hall meeting will feature a
-            wide range of topics that include:
-             Digital Tax Administration (using
-            tech innovation to drive Digital Tax collection and remittance) 5G
-            and Brodband Satellite Communications, Semiconductor Technology and
-            Chipmaking, Automotive Tech, Real Estate Development, Smart
-            AgricTech, Drone Technology (for disaster monitoring and
-            management), Farmland Security Technologies, Renewable Energy
-            Technologies, environmental tech and fintech.
-          </p>
-        </Grid>
-        <Grid xs={3} className={classes.contentWrapper4}>
-          <h2 className={classes.htitle}>
-            Pitching <i class="fa fa-microphone" aria-hidden="true"></i>
-          </h2>
-          <p className={classes.contentw1}>
-            This fair provides the platform showcase your innovative ideas,
-            products and services. It will also feature pitches from creative
-            exhibitors working on unique solutions. Attendees will have the
-            opportunity to network with industry experts, Investors, potential
-            partners, distributors and agents, startup founders among others.
-          </p>
-        </Grid>
-        <Grid xs={3} className={classes.contentWrapper4}>
-          <h2 className={classes.htitle}>
-          Networking & Collaboration <i class="fa fa-handshake-o" style={{ color: "#333" }} aria-hidden="true"
-            ></i>
-          </h2>
-          <p className={classes.contentw1}>
-            The main goals of this event are to
-            foster industrial R&D collaboration, explore business opportunities
-            at the intersection innovation and technology, streamline technology
-            exchange and transfer across various vertical, and promote
-            innovation-driven enterprises for national economic recovery.
-          </p>
-          <Grid item xs={4}>
-        <img src={meet}  className={classes.images} alt="image" />
-        </Grid>
-        </Grid>
+        <Grid
+          className={classes.container}
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 2, sm: 6, md: 12 }}
+        >
+          <Grid xs={4} className={classes.contentWrapper3}>
+            <h2 className={classes.htitle}>
+              Nigerian Innovation-Driven Enterprise Summit Nigerian Universities
+              Innovation Forum
+            </h2>
+            <p className={classes.contentw1}>
+              Innovation Town Hall Meetings The town hall meeting will feature a
+              wide range of topics that include: Digital Tax Administration
+              (using tech innovation to drive Digital Tax collection and
+              remittance) 5G and Brodband Satellite Communications,
+              Semiconductor Technology and Chipmaking, Automotive Tech, Real
+              Estate Development, Smart AgricTech, Drone Technology (for
+              disaster monitoring and management), Farmland Security
+              Technologies, Renewable Energy Technologies, environmental tech
+              and fintech.
+            </p>
+          </Grid>
+          <Grid xs={3} className={classes.contentWrapper4}>
+            <h2 className={classes.htitle}>
+              Pitching <i class="fa fa-microphone" aria-hidden="true"></i>
+            </h2>
+            <p className={classes.contentw1}>
+              This fair provides the platform showcase your innovative ideas,
+              products and services. It will also feature pitches from creative
+              exhibitors working on unique solutions. Attendees will have the
+              opportunity to network with industry experts, Investors, potential
+              partners, distributors and agents, startup founders among others.
+            </p>
+          </Grid>
+          <Grid xs={3} className={classes.contentWrapper4}>
+            <h2 className={classes.htitle}>
+              Networking & Collaboration{" "}
+              <i
+                class="fa fa-handshake-o"
+                style={{ color: "#333" }}
+                aria-hidden="true"
+              ></i>
+            </h2>
+            <p className={classes.contentw1}>
+              The main goals of this event are to foster industrial R&D
+              collaboration, explore business opportunities at the intersection
+              innovation and technology, streamline technology exchange and
+              transfer across various vertical, and promote innovation-driven
+              enterprises for national economic recovery.
+            </p>
+            <Grid item xs={4}>
+              <img src={meet} className={classes.images} alt="image" />
+            </Grid>
+          </Grid>
 
-        <Grid xs={6} className={classes.contentWrapper5}>
-          <h2 className={classes.htitle}>Showcasing <i class="fa fa-globe" aria-hidden="true"></i></h2>
-        <p className={classes.contentw1}>
-            New Product Exhibition Launching new products and services requires
-            branding, visibility, promotional campaigns and the right network.
-            This is an opportunity to interact with your potential clients,
-            investor and partners. This also provide first-hand information and
-            feedback on what your target audience are looking for in your
-            products and services. Some of the captivated audience may want to
-            test feel your new products and services! Innovation Contest Seize
-            this rare opportunity to compete with other exhibitors and stand a
-            chance of winning the coveted IdeaNexT Academy Awards for best
-            Innovation shaping our world. Various sub-awards endorsed by
-            industry experts will give prestige to your business and team.
-          </p>
-       </Grid>
-       <Grid item xs={4}>
-        <img src={ind1}  className={classes.images} alt="image" />
+          <Grid xs={6} className={classes.contentWrapper5}>
+            <h2 className={classes.htitle}>
+              Showcasing <i class="fa fa-globe" aria-hidden="true"></i>
+            </h2>
+            <p className={classes.contentw1}>
+              New Product Exhibition Launching new products and services
+              requires branding, visibility, promotional campaigns and the right
+              network. This is an opportunity to interact with your potential
+              clients, investor and partners. This also provide first-hand
+              information and feedback on what your target audience are looking
+              for in your products and services. Some of the captivated audience
+              may want to test feel your new products and services! Innovation
+              Contest Seize this rare opportunity to compete with other
+              exhibitors and stand a chance of winning the coveted IdeaNexT
+              Academy Awards for best Innovation shaping our world. Various
+              sub-awards endorsed by industry experts will give prestige to your
+              business and team.
+            </p>
+            <Grid item xs={4}>
+            <img src={ind1} className={classes.images} alt="image" />
+          </Grid>
+          <Grid item xs={4}>
+            <img src={ind2} className={classes.images} alt="image" />
+          </Grid>
+          </Grid>
+         
+          <Grid xs={4} className={classes.contentWrapper7}>
+            <h2 className={classes.htitle}>
+              Vision <i class="fa fa-eye" aria-hidden="true"></i>
+            </h2>
+            <p className={classes.contentw1}>
+              2022 Abuja Innovation Fair Seeks to bring together startups,
+              multinationals, investors, incubators universities and
+              polytechnics, research institutes, government agencies from
+              Nigeria and overseas participating the conferences, summits, town
+              hall meetings, startup pitching sessions, create a platform for
+              networking among industries, corporations, academia, and startup
+              ecosystems, and government.
+            </p>
+          </Grid>
         </Grid>
-        <Grid item xs={4}>
-        <img src={ind2}  className={classes.images} alt="image" />
-        </Grid>
-        <Grid xs={4} className={classes.contentWrapper7}>
-          <h2 className={classes.htitle}>Vision <i class="fa fa-eye" aria-hidden="true"></i></h2>
-        <p className={classes.contentw1}>
-            2022 Abuja Innovation Fair Seeks to bring together startups,
-            multinationals, investors, incubators universities and polytechnics,
-            research institutes, government agencies from Nigeria and overseas
-            participating the conferences, summits, town hall meetings, startup
-            pitching sessions, create a platform for networking among
-            industries, corporations, academia, and startup ecosystems, and
-            government.
-          </p>
-        </Grid>
-     
-        </Grid>
-      
-        
       </div>
     </div>
   );
