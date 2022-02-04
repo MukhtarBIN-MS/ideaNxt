@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState } from "react";
+import ReadMoreReact from 'read-more-react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from "@mui/material/Grid";
 import sidepic from "../Images/sidepic.jpg";
@@ -6,6 +7,8 @@ import logo from "../Images/logo.png";
 import meet from "../Images/meet.png";
 import ind1 from "../Images/ind.png";
 import ind2 from "../Images/ind2.png";
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Russo one",
     color: "#000080",
     fontSize: "17px",
-    textAlign: "justify",
+    textAlign: "center",
     "@media screen and (max-width:480px)": {
       
       paddingLeft: "10px",
@@ -49,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contentw1: {
     textAlign: "justify",
-    wordSpacing: "1px",
+    wordSpacing: "auto",
     fontFamily: "nunito",
     fontSize: "17px",
     color: "#CICIC1",
@@ -62,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     background: "none",
     color: "#333",
-
+   
     fontSize: "1 rem",
     marginBottom: "5px",
     "@media screen and (max-width)": {
@@ -83,17 +86,20 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     marginTop: "20px",
     marginLeft: "20px",
+    marginRight: "10px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
     border: "1px solid lightgrey",
     background: "#CCCDC6",
     background: "none",
     fontSize: "20px",
     width: "auto 0",
-    marginLeft: "10px",
   },
   contentWrapper4: {
     borderRadius: "10px",
     marginTop: "20px",
     marginLeft: "20px",
+    marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
     border: "1px solid lightgrey",
@@ -101,25 +107,29 @@ const useStyles = makeStyles((theme) => ({
     background: "none",
     fontSize: "20px",
     width: "auto 0",
-    paddingLeft: "10px",
+   
   },
   contentWrapper5: {
-    borderRadius: "10px",
     marginTop: "20px",
     marginLeft: "20px",
+    marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
-    border: "1px solid lightgrey",
     background: "#CCCDC6",
     background: "none",
     fontSize: "20px",
     width: "auto 0",
     paddingLeft: "10px",
+    '@media screen and (max-width:480px)':{
+      borderRadius: "10px",
+      border: "1px solid lightgrey",
+    }
   },
   contentWrapper6: {
     borderRadius: "10px",
     marginTop: "20px",
     marginLeft: "20px",
+    marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
     border: "1px solid lightgrey",
@@ -174,7 +184,7 @@ const useStyles = makeStyles((theme) => ({
     "@media screen and (max-width:480px)": {
       alignItems: "center",
       justifyContent: "center",
-      paddingLeft: "30px",
+      paddingLeft: "35px",
     },
   },
   dimage: {
@@ -187,7 +197,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function EventTitle() {
+ 
   const classes = useStyles();
+
   return (
     <div className={classes.Title}>
       <div className={classes.eventside}>
@@ -202,6 +214,7 @@ export default function EventTitle() {
 
         <div container className={classes.contentWrapper1}>
           <Grid item xs={12} lg={6}>
+           
             <p className={classes.contentw11}>
               Welcome to the Maiden Edition of Abuja Innovation Fair, a leading
               innovation event in Nigeria. Abuja Expo@ will be held at
@@ -233,6 +246,7 @@ export default function EventTitle() {
               forward to seeing you in March and to showcase innovations shaping
               our world!
             </p>
+           
           </Grid>
           <Grid item lg={6}>
             <img src={sidepic} className={classes.image} alt="image" />
