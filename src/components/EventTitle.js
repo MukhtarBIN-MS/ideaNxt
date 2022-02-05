@@ -292,7 +292,8 @@ export default function EventTitle() {
           columns={{ xs: 2, sm: 6, md: 12 }}
         >
          
-          <Grid xs={4}  className={classes.contentWrapper3}>
+          <Grid xs={4} >
+            <div data-aos="fade-left" className={classes.contentWrapper3}>
             <h2 className={classes.htitle}>
               Nigerian Innovation-Driven Enterprise Summit Nigerian Universities
               Innovation Forum
@@ -308,9 +309,11 @@ export default function EventTitle() {
               Technologies, Renewable Energy Technologies, environmental tech
               and fintech.
             </p>
+            </div>
           </Grid>
          
-          <Grid xs={3} className={classes.contentWrapper4}>
+          <Grid xs={3}>
+            <div data-aos="fade-up-left" className={classes.contentWrapper4}>
             <h2 className={classes.htitle}>
               Pitching <i class="fa fa-microphone" aria-hidden="true"></i>
             </h2>
@@ -321,8 +324,10 @@ export default function EventTitle() {
               opportunity to network with industry experts, Investors, potential
               partners, distributors and agents, startup founders among others.
             </p>
+            </div>
           </Grid>
-          <Grid xs={3} className={classes.contentWrapper4}>
+          <Grid xs={3}>
+            <div data-aos="fade-up-right" className={classes.contentWrapper4}>
             <h2 className={classes.htitle}>
               Networking & Collaboration{" "}
               <i
@@ -341,9 +346,11 @@ export default function EventTitle() {
             <Grid item xs={4}>
               <img src={meet} className={classes.images} alt="myimage" />
             </Grid>
+            </div>
           </Grid>
 
-          <Grid xs={6} className={classes.contentWrapper5}>
+          <Grid xs={6}>
+            <div data-aos="fade-down-right" className={classes.contentWrapper5}>
             <h2 className={classes.htitle}>
               Showcasing <i class="fa fa-globe" aria-hidden="true"></i>
             </h2>
@@ -367,10 +374,11 @@ export default function EventTitle() {
             <Grid item xs={4}>
             <img src={ind1} className={classes.images} alt="mypic" />
           </Grid>
-          
+          </div>
           </Grid>
          
-          <Grid xs={4} className={classes.contentWrapper7}>
+          <Grid xs={4}>
+            <div data-aos="fade-down-left" className={classes.contentWrapper7}>
             <h2 className={classes.htitle}>
               Vision <i class="fa fa-eye" aria-hidden="true"></i>
             </h2>
@@ -383,6 +391,7 @@ export default function EventTitle() {
               networking among industries, corporations, academia, and startup
               ecosystems, and government.
             </p>
+            </div>
           </Grid>
         </Grid>
       </div>
