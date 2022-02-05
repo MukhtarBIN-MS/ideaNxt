@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import ReadMoreReact from 'read-more-react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+import ScrollToTop from "react-scroll-to-top";
 import { makeStyles } from "@material-ui/styles";
 import Grid from "@mui/material/Grid";
 import sidepic from "../Images/sidepic.jpg";
@@ -7,24 +9,8 @@ import logo from "../Images/logo.png";
 import meet from "../Images/meet.png";
 import ind1 from "../Images/ind.png";
 import ind2 from "../Images/ind2.png";
-import IconButton from '@mui/material/IconButton';
-import Collapse from '@mui/material/Collapse';
 
 
-
-const ExpandMore = ((props) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
-
-  
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   eventTitle: {
     fontFamily: "Russo One",
-
+    color: "#000080",
     fontSize: "1 rem",
     textAlign: "center",
     "@media screen and (max-width:480px)": {
@@ -49,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "17px",
     textAlign: "center",
     "@media screen and (max-width:480px)": {
-      
       paddingLeft: "10px",
       textAlign: "center",
     },
@@ -141,6 +126,7 @@ const useStyles = makeStyles((theme) => ({
       border: "1px solid lightgrey",
     }
   },
+
   contentWrapper6: {
     borderRadius: "10px",
     marginTop: "20px",
@@ -227,15 +213,7 @@ export default function EventTitle() {
     <div className={classes.Title}>
    
       <div className={classes.eventside}>
-      <span
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        ></span>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <h2>Hy xrcytvubnijo;yftjvybuniogu</h2>
-      </Collapse>
+     
         <h1 className={classes.eventTitle}>
           2022 Abuja Innovation Fair and Conference
         </h1>
@@ -254,8 +232,10 @@ export default function EventTitle() {
               internation conference center, Abuja and Nile University of
               Nigeria from March 15-17. Hosted Nile University of Nigeria, and
               organized by Nationwide Integrated Software Solutions Consults,
-              APmultimedia, and Primost International Limited. In this maiden
-              edition, we are focusing on the ‌innovating companies and startups
+              APmultimedia, and Primost International Limited. </p>
+              
+              <p className={classes.contentw11}>
+              In this maiden edition, we are focusing on the ‌innovating companies and startups
               (both in Nigeria and overseas), from real estate developers
               creating high-quality affordable housing, to those building
               cheaper renewable energy technologies, and those connecting our
@@ -267,7 +247,10 @@ export default function EventTitle() {
               Innovation-driven Enterprise Summit, and town hall meetings (for
               online and on-site), and an exhibition to promote innovative
               products to potential buyers, distributors, investors and
-              collaborators. The key areas of interest are: Real Estate
+              collaborators. </p>
+
+              <p className={classes.contentw11}>
+              The key areas of interest are: Real Estate
               Development, Industrial Design/Digital fabrication, digital
               economy, automotive design, Renewable Energy and Green
               Technologies, eCommerce Development, 5G Deployment and Broadband
@@ -310,6 +293,7 @@ export default function EventTitle() {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 2, sm: 6, md: 12 }}
         >
+          <ScrollAnimation animateIn="fadeIn">
           <Grid xs={4} className={classes.contentWrapper3}>
             <h2 className={classes.htitle}>
               Nigerian Innovation-Driven Enterprise Summit Nigerian Universities
@@ -327,6 +311,7 @@ export default function EventTitle() {
               and fintech.
             </p>
           </Grid>
+          </ScrollAnimation>
           <Grid xs={3} className={classes.contentWrapper4}>
             <h2 className={classes.htitle}>
               Pitching <i class="fa fa-microphone" aria-hidden="true"></i>
@@ -356,7 +341,7 @@ export default function EventTitle() {
               enterprises for national economic recovery.
             </p>
             <Grid item xs={4}>
-              <img src={meet} className={classes.images} alt="image" />
+              <img src={meet} className={classes.images} alt="myimage" />
             </Grid>
           </Grid>
 
@@ -379,10 +364,10 @@ export default function EventTitle() {
               business and team.
             </p>
             <Grid item xs={4}>
-            <img src={ind2} className={classes.images} alt="image" />
+            <img src={ind2} className={classes.images} alt="mypic" />
           </Grid>
             <Grid item xs={4}>
-            <img src={ind1} className={classes.images} alt="image" />
+            <img src={ind1} className={classes.images} alt="mypic" />
           </Grid>
           
           </Grid>
@@ -403,6 +388,7 @@ export default function EventTitle() {
           </Grid>
         </Grid>
       </div>
+      <ScrollToTop color="black" smooth />
     </div>
   );
 }
