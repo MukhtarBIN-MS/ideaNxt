@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme)=>({
       marginRight:'10px',
       marginBottom:'30px',
       '@media screen and (max-width:480px)':{
-        width:'355px'
+        width:'300px'
       },
   
   
