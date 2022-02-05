@@ -9,9 +9,7 @@ import logo from "../Images/logo.png";
 import meet from "../Images/meet.png";
 import ind1 from "../Images/ind.png";
 import ind2 from "../Images/ind2.png";
-
-
-
+ 
 
 const useStyles = makeStyles((theme) => ({
   eventside: {
@@ -270,7 +268,7 @@ export default function EventTitle() {
         </div>
       </div>
       <div id="eInfo" className={classes.all}>
-        <div className={classes.contentWrapper2}>
+        <div data-aos="fade-right" className={classes.contentWrapper2}>
           <img src={sidepic} className={classes.dimage} alt="image" />
           <p className={classes.contentw1}>
             2022 Abuja Expo (aka Abuja Innovation Fair 1.0) focuses on the
@@ -293,8 +291,8 @@ export default function EventTitle() {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 2, sm: 6, md: 12 }}
         >
-          <ScrollAnimation animateIn="fadeIn">
-          <Grid xs={4} className={classes.contentWrapper3}>
+         
+          <Grid xs={4}  className={classes.contentWrapper3}>
             <h2 className={classes.htitle}>
               Nigerian Innovation-Driven Enterprise Summit Nigerian Universities
               Innovation Forum
@@ -311,7 +309,7 @@ export default function EventTitle() {
               and fintech.
             </p>
           </Grid>
-          </ScrollAnimation>
+         
           <Grid xs={3} className={classes.contentWrapper4}>
             <h2 className={classes.htitle}>
               Pitching <i class="fa fa-microphone" aria-hidden="true"></i>
