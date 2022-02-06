@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper3: {
     borderRadius: "10px",
     marginTop: "20px",
-    marginLeft: "20px",
+    marginLeft: "10px",
     marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     background: "#F2F3F5",
     marginTop: "20px",
-    marginLeft: "20px",
+    marginLeft: "10px",
     marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper5: {
     marginTop: "20px",
     background: "#F2F3F5",
-    marginLeft: "20px",
+    marginLeft: "10px",
     marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
@@ -138,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper7: {
     borderRadius: "10px",
     marginTop: "20px",
-    marginLeft: "20px",
+    marginLeft: "10px",
     marginRight: "10px",
     border: "1px solid lightgrey",
     background: "#CCCDC6",
