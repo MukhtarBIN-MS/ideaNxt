@@ -85,7 +85,10 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper3: {
     borderRadius: "10px",
     marginTop: "20px",
-  
+    marginLeft: "20px",
+    marginRight: "10px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
     border: "1px solid lightgrey",
     background: "#F2F3F5",
     fontSize: "20px",

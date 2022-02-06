@@ -54,24 +54,7 @@ export default function Form() {
             required
           />
         </div>
-        <div>
-          <label>Password</label>
-          <input
-            type="password"
-            name="password1"
-            onChange={handleInputChange}
-            value={inputs.password1}
-          />
-        </div>
-        <div>
-          <label>Re-enter Password</label>
-          <input
-            type="password"
-            name="password2"
-            onChange={handleInputChange}
-            value={inputs.password2}
-          />
-        </div>
+       
         <button type="submit">Sign Up</button>
       </form>
     </div>
