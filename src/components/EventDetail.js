@@ -6,6 +6,10 @@ import { Button } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme)=>({
+    root:{
+       marginTop:'10px',
+       marginBottom:'30px',
+    },
        eventside:{
         background:'linear-gradient(to right, #29467f, #101c32)',
            alignItems:'center',
@@ -58,6 +62,7 @@ const useStyles = makeStyles((theme)=>({
 export default function EventDetail(){
     const classes = useStyles();
     return(
+        <div className={classes.root}>
         <div  id="tickets" className={classes.eventside}>
             <h1 className={classes.eventTitle}>Event Details</h1>
             <h3 className={classes.eventsTitle}>2022 ideaNexT<span>&#174;</span> Expo</h3>
@@ -152,6 +157,6 @@ export default function EventDetail(){
                  </Grid>
          </Grid>
         </div>
-
+        </div>
     );
 }

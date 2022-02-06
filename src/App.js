@@ -1,4 +1,5 @@
 import React from "react";
+
 import { cssBaseline } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import cover from "./Images/cover.png";
@@ -8,6 +9,7 @@ import EventShedule from "./components/EventShedule";
 import EventDetail from "./components/EventDetail";
 import Footer from "./components/Footer";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height:'700px',
@@ -15,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     '@media screen and (max-width:480px)':{
-      backgroundSize: "cover",
-    },
-    
+      backgroundSize:'cover',  
+    }
+      
   },
   container: {
     justifyContent: "space-between",
@@ -41,6 +43,7 @@ export default function App() {
         <EventShedule />
         <br></br>
         <br></br>
+    
         <EventDetail />
         
         <Footer />

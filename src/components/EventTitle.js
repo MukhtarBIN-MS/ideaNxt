@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   eventTitle: {
     fontFamily: "Russo One",
+    
     color: "#000080",
     fontSize: "1 rem",
     textAlign: "center",
@@ -84,38 +85,33 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper3: {
     borderRadius: "10px",
     marginTop: "20px",
-    marginLeft: "20px",
-    marginRight: "10px",
-    paddingLeft: "10px",
-    paddingRight: "10px",
+  
     border: "1px solid lightgrey",
-    background: "#CCCDC6",
-    background: "none",
+    background: "#F2F3F5",
     fontSize: "20px",
     width: "auto 0",
+    
   },
   contentWrapper4: {
     borderRadius: "10px",
+    background: "#F2F3F5",
     marginTop: "20px",
     marginLeft: "20px",
     marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
     border: "1px solid lightgrey",
-    background: "#CCCDC6",
-    background: "none",
     fontSize: "20px",
     width: "auto 0",
    
   },
   contentWrapper5: {
     marginTop: "20px",
+    background: "#F2F3F5",
     marginLeft: "20px",
     marginRight: "10px",
     paddingLeft: "10px",
     paddingRight: "10px",
-    background: "#CCCDC6",
-    background: "none",
     fontSize: "20px",
     width: "auto 0",
     paddingLeft: "10px",
@@ -128,16 +124,13 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper6: {
     borderRadius: "10px",
     marginTop: "20px",
-    marginLeft: "20px",
-    marginRight: "10px",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-    border: "1px solid lightgrey",
     background: "#CCCDC6",
+    border: "1px solid lightgrey",
+    background: "#F2F3F5",
     background: "none",
     fontSize: "20px",
     width: "auto 0",
-    paddingLeft: "10px",
+   
   },
   contentWrapper7: {
     borderRadius: "10px",
@@ -149,6 +142,7 @@ const useStyles = makeStyles((theme) => ({
     background: "none",
     fontSize: "20px",
     width: "auto 0",
+    background: "#F2F3F5",
     paddingLeft: "10px",
   },
 
@@ -184,7 +178,7 @@ const useStyles = makeStyles((theme) => ({
     "@media screen and (max-width:480px)": {
       alignItems: "center",
       justifyContent: "center",
-      paddingLeft: "20px",
+      paddingLeft: "30px",
     },
   },
   dimage: {
@@ -262,9 +256,9 @@ export default function EventTitle() {
             </p>
            
           </Grid>
-          <Grid item lg={6}>
+          
             <img src={sidepic} className={classes.image} alt="image" />
-          </Grid>
+          
         </div>
       </div>
       <div id="eInfo" className={classes.all}>
@@ -285,14 +279,9 @@ export default function EventTitle() {
             that are now accelerating innovation-driven enterprise.
           </p>
         </div>
-        <Grid
-          className={classes.container}
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 2, sm: 6, md: 12 }}
-        >
+      
          
-          <Grid xs={4} >
+          
             <div data-aos="fade-left" className={classes.contentWrapper3}>
             <h2 className={classes.htitle}>
               Nigerian Innovation-Driven Enterprise Summit Nigerian Universities
@@ -310,9 +299,9 @@ export default function EventTitle() {
               and fintech.
             </p>
             </div>
-          </Grid>
+          
          
-          <Grid xs={3}>
+          
             <div data-aos="fade-up-left" className={classes.contentWrapper4}>
             <h2 className={classes.htitle}>
               Pitching <i class="fa fa-microphone" aria-hidden="true"></i>
@@ -325,8 +314,8 @@ export default function EventTitle() {
               partners, distributors and agents, startup founders among others.
             </p>
             </div>
-          </Grid>
-          <Grid xs={3}>
+          
+        
             <div data-aos="fade-up-right" className={classes.contentWrapper4}>
             <h2 className={classes.htitle}>
               Networking & Collaboration{" "}
@@ -343,13 +332,13 @@ export default function EventTitle() {
               transfer across various vertical, and promote innovation-driven
               enterprises for national economic recovery.
             </p>
-            <Grid item xs={4}>
-              <img src={meet} className={classes.images} alt="myimage" />
-            </Grid>
             </div>
-          </Grid>
+         
+         
+              <img src={meet} className={classes.images} alt="myimage" />
+           
 
-          <Grid xs={6}>
+        
             <div data-aos="fade-down-right" className={classes.contentWrapper5}>
             <h2 className={classes.htitle}>
               Showcasing <i class="fa fa-globe" aria-hidden="true"></i>
@@ -368,16 +357,16 @@ export default function EventTitle() {
               sub-awards endorsed by industry experts will give prestige to your
               business and team.
             </p>
-            <Grid item xs={4}>
-            <img src={ind2} className={classes.images} alt="mypic" />
-          </Grid>
-            <Grid item xs={4}>
-            <img src={ind1} className={classes.images} alt="mypic" />
-          </Grid>
           </div>
-          </Grid>
          
-          <Grid xs={4}>
+
+         
+            <img src={ind2} className={classes.images} alt="mypic" />
+         
+            <img src={ind1} className={classes.images} alt="mypic" />
+         
+         
+         
             <div data-aos="fade-down-left" className={classes.contentWrapper7}>
             <h2 className={classes.htitle}>
               Vision <i class="fa fa-eye" aria-hidden="true"></i>
@@ -392,8 +381,8 @@ export default function EventTitle() {
               ecosystems, and government.
             </p>
             </div>
-          </Grid>
-        </Grid>
+         
+        
       </div>
       <ScrollToTop color="black" smooth />
     </div>
