@@ -9,9 +9,11 @@ import App from './App';
 import Form from './components/Form'
 
 
+
 const Home = () => {
+  
   return (
-    <Router>
+    <Router forceRefresh={true} >
         <Routes>
           <Route exact={true} path="/" element={<App/>}/>
           <Route  path="/register" element={<Form/>}/>
