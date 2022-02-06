@@ -64,8 +64,8 @@ export default function EventShedule() {
             <h4 className={classes.eventText1}>When</h4>
             <br></br>
             <p className={classes.eventText}>
-              Wednesday, Tuesday 8 2021 to<br></br>
-              Thursday 10 March, 2022 (GMT +1)
+              Wednesday, Tuesday 15 2021 to<br></br>
+              Thursday 17 March, 2022 (GMT +1)
             </p>
           </div>
         </Grid>

@@ -5,16 +5,16 @@ const useStyles = makeStyles((theme) => ({}));
 
 export default function Form() {
   const [inputs, setInputs] = useState();
-  const handleSubmit = (event) => {
-    if (event) {
-      event.preventDefault();
+  const handleSubmit = (e) => {
+    if (e) {
+      e.preventDefault();
     }
   };
-  const handleInputChange = (event) => {
-    event.persist();
+  const handleInputChange = (e) => {
+    e.persist();
     setInputs((inputs) => ({
       ...inputs,
-      [event.target.name]: event.target.value,
+      [e.target.name]: e.target.value,
     }));
   };
 
