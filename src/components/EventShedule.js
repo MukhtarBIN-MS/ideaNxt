@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    marginBottom:'20px',
     "@media screen and (max-width:480px)": {
       flexDirection: "column",
       display: "flex",

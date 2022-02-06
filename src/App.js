@@ -1,5 +1,4 @@
 import React from "react";
-
 import { cssBaseline } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import cover from "./Images/cover.png";
@@ -7,6 +6,7 @@ import Header from "./components/Header";
 import EventTitle from "./components/EventTitle";
 import EventShedule from "./components/EventShedule";
 import EventDetail from "./components/EventDetail";
+import Register from './components/Register'
 import Footer from "./components/Footer";
 
 
@@ -41,6 +41,7 @@ export default function App() {
       <div className={classes.container}>
         <EventTitle />
         <EventShedule />
+        <Register/>
         <br></br>
         <br></br>
     
