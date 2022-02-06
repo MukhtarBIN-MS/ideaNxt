@@ -17,14 +17,10 @@ export default function Form() {
       [event.target.name]: event.target.value,
     }));
   };
-  return {
-    handleSubmit,
-    handleInputChange,
-    inputs,
-  };
 
-  return (
-    <div className={classes.formContainer}>
+const classes = useStyles();
+ return (
+    <div>
       <form onSubmit={handleSubmit}>
         <div>
           <label>First Name</label>
