@@ -145,12 +145,20 @@ export default function Form() {
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Section To Attend</label>
               <select className={classes.textInput}>
-                <option value="grapefruit">S</option>
-                <option value="lime">Lime</option>
-                <option selected value="coconut">
-                  Coconut
-                </option>
-                <option value="mango">Mango</option>
+                <option value="Trade and Investment Innovation Town Hall">Trade and Investment Innovation Town Hall</option>
+                <option value="Al and Robotics Town Hall">Al and Robotics Town Hall</option>
+                <option selected value=" Electric Vehicle Innovation Town Hall"> Electric Vehicle Innovation Town Hall</option>
+                <option value="Innovation Hubs' Forum">Innovation Hubs' Forum</option>
+                <option value="Disruptive Starup Forum">Disruptive Starup Forum</option>
+                <option value="Digital Tax Forum">Digital Tax Forum</option>
+                <option value="Telecoms and 5G Technologies Forum">Telecoms and 5G Technologies Forum</option>
+                <option value="Broadband  Communication Forum">Broadband  Communication Forum</option>
+                <option value="SmartAgriTech Forum">SmartAgriTech Forum</option>
+                <option value="Semiconductor and Chipmaking Forum">Semiconductor and Chipmaking Forum</option>
+                <option value="Drone Technology Forum">Drone Technology Forum</option>
+                <option value="Satellite Internet Communication Forum">Satellite Internet Communication Forum</option>
+                <option value="Renewable and Clean Energy Forum"> Renewable and Clean Energy Forum</option>
+                <option value="AR & VR Forum"> AR & VR Forum</option>
               </select>
             </div>
 
