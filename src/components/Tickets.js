@@ -60,7 +60,7 @@ export default function Tickets(props) {
         <hr/>
         <h3>*Vat Exclusive</h3>
         <h4 className={classes.left}>{props.ticketDLprice}</h4>
-        <h4 className={classes.left}>&#8358;{props.ticketLprice}</h4>
+        <h4 className={classes.left}>{props.ticketLprice}</h4>
       </CardContent>
       <CardActions>
         <Button className={classes.button} variant="outlined" size="small">Reserve now</Button>
