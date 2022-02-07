@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/styles";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import InputLabel from '@mui/material/InputLabel';
 
 const useStyles = makeStyles((theme) => ({
   Rcontainer: {
@@ -16,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#F2F3F5",
   },
   textLabel: {
-    marginBottom: "5px",
+    marginBottom: "10px",
     marginTop: "10px",
     fontFamily: "nunito",
   },
@@ -35,11 +38,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  button:{
-    width:'100px',
-    alignItems:'center',
-    justifyContent:'center'
-  }
+  button: {
+    width: "100px",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 }));
 
 export default function Form() {
@@ -142,34 +145,45 @@ export default function Form() {
                 variant="outlined"
               />
             </div>
-            <div className={classes.labelAlign}>
+         
+         <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Section To Attend</label>
-              <select className={classes.textInput}>
-                <option value="Trade and Investment Innovation Town Hall">Trade and Investment Innovation Town Hall</option>
-                <option value="Al and Robotics Town Hall">Al and Robotics Town Hall</option>
-                <option selected value=" Electric Vehicle Innovation Town Hall"> Electric Vehicle Innovation Town Hall</option>
-                <option value="Innovation Hubs' Forum">Innovation Hubs' Forum</option>
-                <option value="Disruptive Starup Forum">Disruptive Starup Forum</option>
-                <option value="Digital Tax Forum">Digital Tax Forum</option>
-                <option value="Telecoms and 5G Technologies Forum">Telecoms and 5G Technologies Forum</option>
-                <option value="Broadband  Communication Forum">Broadband  Communication Forum</option>
-                <option value="SmartAgriTech Forum">SmartAgriTech Forum</option>
-                <option value="Semiconductor and Chipmaking Forum">Semiconductor and Chipmaking Forum</option>
-                <option value="Drone Technology Forum">Drone Technology Forum</option>
-                <option value="Satellite Internet Communication Forum">Satellite Internet Communication Forum</option>
-                <option value="Renewable and Clean Energy Forum"> Renewable and Clean Energy Forum</option>
-                <option value="AR & VR Forum"> AR & VR Forum</option>
-              </select>
+             
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                onChange={handleInputChange}
+                className={classes.textInput}
+                variant="outlined"
+                defaultValue="select"
+              >
+                <MenuItem value="Trade and Investment Innovation Town Hall">Trade and Investment Innovation Town Hall</MenuItem>
+                <MenuItem value=" Al and Robotics Town Hall"> Al and Robotics Town Hall</MenuItem>
+                <MenuItem value="Electric Vehicle Innovation Town Hall">Electric Vehicle Innovation Town Hall</MenuItem>
+                <MenuItem value="Innovation Hubs' Forum">Innovation Hubs' Forum</MenuItem>
+                <MenuItem value="Disruptive Starup Forum">Disruptive Starup Forum</MenuItem>
+                <MenuItem value=" Telecoms and 5G Technologies Forum"> Telecoms and 5G Technologies Forum</MenuItem>
+                <MenuItem value="Broadband Communication Forum">Broadband Communication Forum</MenuItem>
+                <MenuItem value="Semiconductor and Chipmaking Forum">Semiconductor and Chipmaking Forum</MenuItem>
+                <MenuItem value="Drone Technology Forum">Drone Technology Forum</MenuItem>
+                <MenuItem value="Satellite Internet Communication Forum">Satellite Internet Communication Forum</MenuItem>
+                <MenuItem value=" Renewable and Clean Energy Forum"> Renewable and Clean Energy Forum</MenuItem>
+                <MenuItem value=" SmartAgriTech Forum"> SmartAgriTech Forum</MenuItem>
+                <MenuItem value="AR & VR Forum"> Renewable and Clean Energy Forum</MenuItem>
+                
+              </Select>
             </div>
 
-           <center><Button
-              type="submit"
-              className={classes.button}
-              variant="contained"
-              color="success"
-            >
-              Register
-            </Button></center> 
+            <center>
+              <Button
+                type="submit"
+                className={classes.button}
+                variant="contained"
+                color="success"
+              >
+                Register
+              </Button>
+            </center>
           </div>
         </form>
       </div>
