@@ -35,6 +35,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  button:{
+    width:'100px',
+    alignItems:'center',
+    justifyContent:'center'
+  }
 }));
 
 export default function Form() {
@@ -149,14 +154,14 @@ export default function Form() {
               </select>
             </div>
 
-            <Button
+           <center><Button
               type="submit"
               className={classes.button}
               variant="contained"
               color="success"
             >
               Register
-            </Button>
+            </Button></center> 
           </div>
         </form>
       </div>
