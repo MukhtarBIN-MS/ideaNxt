@@ -8,6 +8,7 @@ import Radio from '@mui/material/Radio';
 import InputLabel from "@mui/material/InputLabel";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Footer from './Footer';
 
 const useStyles = makeStyles((theme) => ({
@@ -112,6 +113,33 @@ export default function Form() {
               />
             </div>
             <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Company Name</label>
+              <TextField
+                id="outlined-basic"
+                label="(optional)"
+                placeholder="(optional)"
+                type="text"
+                onChange={handleInputChange}
+                InputProps={{
+                  className: classes.textInput,
+                }}
+               
+                variant="outlined"
+              />
+            </div>
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Address</label>
+              <TextareaAutosize
+                aria-label="minimum height"
+                minRows={3}
+                placeholder="(optional)"
+                onChange={handleInputChange}
+                className={classes.textInput}
+                
+                variant="outlined"
+              />
+            </div>
+            <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Email</label>
               <TextField
                 id="outlined-basic"
@@ -140,21 +168,7 @@ export default function Form() {
                 variant="outlined"
               />
             </div>
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>
-                WhatsApp number (if different)
-              </label>
-              <TextField
-                id="outlined-basic"
-                label="contact"
-                type="number"
-                onChange={handleInputChange}
-                InputProps={{
-                  className: classes.textInput,
-                }}
-                variant="outlined"
-              />
-            </div>
+       
 
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Section To Attend</label>
