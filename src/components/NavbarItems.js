@@ -16,8 +16,8 @@ export const NavbarItems = [
         
     },
     {
-        title:'SignUp',
-        url:'#',
+        title:'Register',
+        url:'#reg',
         
     },
 
