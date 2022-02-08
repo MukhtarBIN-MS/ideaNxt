@@ -41,9 +41,7 @@ export default function App() {
       <div className={classes.container}>
         <EventTitle />
         <EventShedule />
-        <div id="reg">
         <Register/>
-        </div>
         <br></br>
         <br></br>
     

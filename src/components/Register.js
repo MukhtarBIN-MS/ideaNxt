@@ -38,7 +38,7 @@ export default function Register() {
   const classes = useStyles();
   return(
 
-  <div className={classes.Rcontainer}>
+  <div id="reg" data-aos="flip-right" className={classes.Rcontainer}>
     <h2 className={classes.title}>Register to Attend</h2>
     <Link className={classes.btn} to="/register">
     <Button className={classes.button} variant="contained" color="success">
