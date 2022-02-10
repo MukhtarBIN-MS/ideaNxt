@@ -19,7 +19,8 @@ export default function Footer() {
     const classes = useStyles();
   return (
       <div className="footer">
-       <h3 className={classes.footerText}>Powered by Nationwide Integrated Software Solutions Consults</h3>
+       <h3 className={classes.footerText}>Powered by
+        Nationwide Integrated Software Solutions Consults</h3>
        <h3 className={classes.footerText}>Copyright<span>&#169;</span> Nationwide Integrated Software Solutions Consults 2022 </h3>
       </div>
   );

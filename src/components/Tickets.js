@@ -36,12 +36,12 @@ const useStyles = makeStyles((theme)=>({
       fontFamily:'nunito'
     },
     button:{
-      background:'green',
-      color:'white'
+      background:'white',
+      color:'#333'
     },
     text:{
       '@media screen and (max-width:1115px)':{
-        fontSize:'15px',  
+        fontSize:'10px',  
       },
     }
  
@@ -52,9 +52,9 @@ export default function Tickets(props) {
   return (
     <div className={classes.card}>
       <CardContent className={classes.root}>
-        <h2 className={classes.text}>{props.ticketName} </h2>
+        <h5 className={classes.text}>{props.ticketName} </h5>
 
-        <h2 className={classes.text}> {props.ticketTitle}</h2>
+        <h4 className={classes.text}> {props.ticketTitle}</h4>
         <h4 className={classes.text}> {props.ticketQuantity}</h4>
         <h4 className={classes.text}>{props.ticketPrice}</h4>
         <h4 className={classes.text}>{props.ticketPPrice}</h4>
