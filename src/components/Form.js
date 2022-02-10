@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useRef, useState } from "react";
+import axios from "axios";
 import { makeStyles } from "@material-ui/styles";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -57,21 +58,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Form() {
-  const [state, setState] = useState();
-  const handleSubmit = (e) => {
-    if (e) {
-      e.preventDefault();
-    }
-  };
-  const handleInputChange = (evt) => {
-    const name = evt.target.name;
-    const value =
-      evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
-    setState({
-      ...state,
-      [name]: value,
-    });
-  };
+  const Fname = useRef();
+  const Lname = useRef();
+  const Email = useRef();
+  const address = useRef();
+  const cpname = useRef();
+  const contact = useRef();
+  const section = useRef();
+  const attend = useRef();
+
+
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [eml, setEml] = useState("");
+  const [add, setAdd] = useState();
+  const [Cp_name, setCpname] = useState("");
+  const [con_tact, setContact] = useState("");
+  const [sec_tion, setSection] = useState("");
+  const [att_end, setAttend] = useState("");
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault();
+
+  }
+
 
   const classes = useStyles();
   return (
@@ -87,9 +97,11 @@ export default function Form() {
               <TextField
                 id="outlined-basic"
                 label="firstname"
+                ref={Fname}
+                value={fname}
                 placeholder="Firstname"
                 type="text"
-                onChange={handleInputChange}
+                onChange={(e) => setFname(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
                 }}
@@ -102,9 +114,11 @@ export default function Form() {
               <TextField
                 id="outlined-basic"
                 label="lastname"
+                ref={Lname}
+                value={lname}
                 placeholder="Last name"
                 type="text"
-                onChange={handleInputChange}
+                onChange={(e) => setLname(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
                 }}
@@ -119,7 +133,9 @@ export default function Form() {
                 label="(optional)"
                 placeholder="(optional)"
                 type="text"
-                onChange={handleInputChange}
+                ref={cpname}
+                value={Cp_name}
+                onChange={(e) => setCpname(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
                 }}
@@ -132,8 +148,10 @@ export default function Form() {
               <TextareaAutosize
                 aria-label="minimum height"
                 minRows={3}
+                ref={address}
+                value={add}
                 placeholder="(optional)"
-                onChange={handleInputChange}
+                onChange={(e) => setAdd(e.target.value)}
                 className={classes.textInput}
                 
                 variant="outlined"
@@ -146,7 +164,9 @@ export default function Form() {
                 label="Email"
                 placeholder="Email"
                 type="email"
-                onChange={handleInputChange}
+                ref={Email}
+                value={eml}
+                onChange={(e) => setEml(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
                 }}
@@ -160,7 +180,9 @@ export default function Form() {
                 id="outlined-basic"
                 label="contact"
                 type="number"
-                onChange={handleInputChange}
+                ref={contact}
+                value={con_tact}
+                onChange={(e) => setContact(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
                 }}
@@ -176,7 +198,9 @@ export default function Form() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                onChange={handleInputChange}
+                ref={section}
+                value={sec_tion}
+                onChange={(e) => setSection(e.target.value)}
                 className={classes.textInput}
                 variant="outlined"
                 defaultValue="select"
@@ -233,6 +257,9 @@ export default function Form() {
                 aria-labelledby="demo-radio-buttons-group-label"
                 defaultValue="In person"
                 name="radio-buttons-group"
+                value={attend}
+                ref={att_end}
+                onChange={(e) => setAttend(e.target.value)}
               >
                 <FormControlLabel
                   value="In person"
