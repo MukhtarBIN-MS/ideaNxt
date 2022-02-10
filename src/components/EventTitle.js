@@ -53,8 +53,9 @@ const useStyles = makeStyles((theme) => ({
   contentw1: {
     textAlign: "justify",
     wordSpacing: "auto",
+    textJustify:'inter-character',
     fontFamily: "nunito",
-    fontSize: "17px",
+    fontSize: "15px",
     color: "#CICIC1",
     paddingLeft: "15px",
     paddingRight: "10px",
@@ -224,8 +225,8 @@ export default function EventTitle() {
             <p className={classes.contentw11}>
               Welcome to the Maiden Edition of Abuja Innovation Fair, a leading
               innovation event in Nigeria. Abuja Expo@ will be held at
-              internation conference center, Abuja and Nile University of
-              Nigeria from March 15-17. Hosted Nile University of Nigeria, and
+              international conference center, Abuja and Nile University of
+              Nigeria from March 15-17. Hosted by Nile University of Nigeria, and
               organized by Nationwide Integrated Software Solutions Consults,
               APmultimedia, and Primost International Limited. </p>
               
@@ -291,7 +292,7 @@ export default function EventTitle() {
               Innovation Forum
             </h2>
             <p className={classes.contentw1}>
-              Innovation Town Hall Meetings The town hall meeting will feature a
+              Innovation Town Hall Meetings, The town hall meeting will feature a
               wide range of topics that include: Digital Tax Administration
               (using tech innovation to drive Digital Tax collection and
               remittance) 5G and Brodband Satellite Communications,

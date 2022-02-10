@@ -79,7 +79,7 @@ export default function EventDetail(){
                         ticketTitle="FOR INDOOR SHELL SCHEME STANDS"
                         ticketQuantity="Quantity in 9sqm"
                         ticketPrice="&#8358;25,000 per sqm"
-                        ticketInfo="Payment covers: 1 tabel, 2 chairs, 1 spot light,
+                        ticketInfo="Payment covers: 1 table, 2 chairs, 1 spot light,
                         power point and fascial"
                         ticketLprice="&#8358;225,000"
                         />

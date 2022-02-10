@@ -8,7 +8,9 @@ import Button from '@mui/material/Button';
 
 const useStyles = makeStyles((theme)=>({
     root:{
-      border:'1px solid white',
+      border:'1px solid #040720',
+      background:'#040720',
+      color:'snow',
       borderRadius:'7px',
       paddingLeft:'10px',
       height:'350px',
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme)=>({
       
     },
     card:{
-      background:'snow',
+      background:'#040720',
       width:'auto',
       marginLeft:'10px',
       paddingLeft:'10px',
@@ -48,7 +50,7 @@ const useStyles = makeStyles((theme)=>({
 export default function Tickets(props) {
     const classes = useStyles();
   return (
-    <Card className={classes.card}>
+    <div className={classes.card}>
       <CardContent className={classes.root}>
         <h2 className={classes.text}>{props.ticketName} </h2>
 
@@ -65,6 +67,6 @@ export default function Tickets(props) {
       <CardActions>
         <Button className={classes.button} variant="outlined" size="small">Reserve now</Button>
       </CardActions>
-    </Card>
+    </div>
   );
 }
