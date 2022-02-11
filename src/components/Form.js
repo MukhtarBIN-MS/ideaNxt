@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import axios from "axios";
 import { makeStyles } from "@material-ui/styles";
 import TextField from "@mui/material/TextField";
@@ -9,7 +9,9 @@ import Radio from '@mui/material/Radio';
 import InputLabel from "@mui/material/InputLabel";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+
 import TextareaAutosize from '@mui/material/TextareaAutosize';
+import DatePicker from "react-datepicker";
 import Footer from './Footer';
 
 const useStyles = makeStyles((theme) => ({
@@ -66,6 +68,9 @@ export default function Form() {
   const contact = useRef();
   const section = useRef();
   const attend = useRef();
+  const designation = useRef();
+  const deptm = useRef();
+  const daob = useRef();
 
 
   const [fname, setFname] = useState("");
@@ -76,6 +81,9 @@ export default function Form() {
   const [con_tact, setContact] = useState("");
   const [sec_tion, setSection] = useState("");
   const [att_end, setAttend] = useState("");
+  const [desi, setDesig] = useState("");
+  const [dept, setDept] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
@@ -126,8 +134,9 @@ export default function Form() {
                 variant="outlined"
               />
             </div>
+           
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Company Name</label>
+              <label className={classes.textLabel}>Institution/Affliation/Company</label>
               <TextField
                 id="outlined-basic"
                 label="(optional)"
@@ -144,13 +153,47 @@ export default function Form() {
               />
             </div>
             <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Designation</label>
+              <TextField
+                id="outlined-basic"
+                label="deignation"
+                placeholder="deisgnation"
+                ref={designation}
+                value={desi}
+                placeholder="designation"
+                onChange={(e) => setDesig(e.target.value)}
+                InputProps={{
+                  className: classes.textInput,
+                }}
+                
+                variant="outlined"
+              />
+            </div>
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Dept/Unit</label>
+              <TextField
+                id="outlined-basic"
+                label="dept/unit"
+                placeholder="dept/unit"
+                ref={deptm}
+                value={dept}
+                placeholder="dept/unit"
+                onChange={(e) => setDept(e.target.value)}
+                InputProps={{
+                  className: classes.textInput,
+                }}
+                
+                variant="outlined"
+              />
+            </div>
+            <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Address</label>
               <TextareaAutosize
                 aria-label="minimum height"
                 minRows={3}
                 ref={address}
                 value={add}
-                placeholder="(optional)"
+                placeholder="address"
                 onChange={(e) => setAdd(e.target.value)}
                 className={classes.textInput}
                 
@@ -193,7 +236,7 @@ export default function Form() {
        
 
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Section To Attend</label>
+              <label className={classes.textLabel}>Area of Interset</label>
 
               <Select
                 labelId="demo-simple-select-label"
@@ -257,8 +300,8 @@ export default function Form() {
                 aria-labelledby="demo-radio-buttons-group-label"
                 defaultValue="In person"
                 name="radio-buttons-group"
-                value={attend}
-                ref={att_end}
+                value={att_end}
+                ref={attend}
                 onChange={(e) => setAttend(e.target.value)}
               >
                 <FormControlLabel

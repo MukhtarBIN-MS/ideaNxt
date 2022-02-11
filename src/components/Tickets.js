@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme)=>({
     },
     text:{
       '@media screen and (max-width:1115px)':{
-        fontSize:'10px',  
+        fontSize:'15px',  
       },
     }
  
