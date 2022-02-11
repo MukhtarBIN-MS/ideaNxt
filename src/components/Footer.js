@@ -10,7 +10,9 @@ const useStyles = makeStyles((theme)=>({
         textAlign:'center'
     },
     footer:{
-        marginTop:'30px'
+        marginTop:'30px',
+        backgroundColor:'#040720',
+        color:'snow'
     }
  
  }))

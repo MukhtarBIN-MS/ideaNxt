@@ -25,6 +25,8 @@ const useStyles = makeStyles((theme)=>({
     card:{
       background:'#040720',
       width:'auto',
+      border:'1px solid #040720',
+      borderRadius:'10px',
       marginLeft:'10px',
       paddingLeft:'10px',
       marginRight:'10px',
