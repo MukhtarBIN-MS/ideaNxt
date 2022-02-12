@@ -5,14 +5,20 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import Radio from '@mui/material/Radio';
+import Radio from "@mui/material/Radio";
 import InputLabel from "@mui/material/InputLabel";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import DatePicker from "@mui/lab/DatePicker";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
+import {countries} from "./Countries";
+import Box from "@mui/material/Box";
+import Autocomplete from "@mui/material/Autocomplete";
+import Footer from "./Footer";
 
-import TextareaAutosize from '@mui/material/TextareaAutosize';
-import DatePicker from "react-datepicker";
-import Footer from './Footer';
+//List of countries to populate in Autofill select
 
 const useStyles = makeStyles((theme) => ({
   Rcontainer: {
@@ -45,18 +51,18 @@ const useStyles = makeStyles((theme) => ({
   labelAlign: {
     display: "flex",
     flexDirection: "column",
-    marginBottom:'10px'
+    marginBottom: "10px",
   },
   button: {
     width: "100px",
- 
-    marginTop:'30px',
+
+    marginTop: "30px",
     alignItems: "center",
     justifyContent: "center",
   },
-  form:{
-    marginBottom:'15px'
-  }
+  form: {
+    marginBottom: "15px",
+  },
 }));
 
 export default function Form() {
@@ -71,7 +77,7 @@ export default function Form() {
   const designation = useRef();
   const deptm = useRef();
   const daob = useRef();
-
+  const contr = useRef();
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -83,13 +89,33 @@ export default function Form() {
   const [att_end, setAttend] = useState("");
   const [desi, setDesig] = useState("");
   const [dept, setDept] = useState("");
+  const [cont, setCont] = useState("");
   const [startDate, setStartDate] = useState(new Date());
 
-  const handleSubmit = async (e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-  }
+    const data = {
+      Firstname: Fname.current.value,
+      LastName:  Lname.current.value,
+      DOB:       daob.current.value,
+      Email:     Email.current.value,
+      Address:   address.current.value,
+      Company_name: cpname.current.value,
+      Contact: contact.current.value,
+      Section : section.current.value,
+      Attend_In : attend.current.value,
+      Designation: designation.current.value,
+      Department: dept.current.value,
+      Country: contr.current.value
 
+    }
+    try{
+
+    }catch(err){
+      console.log(err)
+    }
+  };
 
   const classes = useStyles();
   return (
@@ -101,7 +127,7 @@ export default function Form() {
         <form onSubmit={handleSubmit}>
           <div className={classes.textInputContainer}>
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>First Name</label>
+              <label className={classes.textLabel}>First Name:</label>
               <TextField
                 id="outlined-basic"
                 label="firstname"
@@ -118,7 +144,7 @@ export default function Form() {
               />
             </div>
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Last Name</label>
+              <label className={classes.textLabel}>Last Name:</label>
               <TextField
                 id="outlined-basic"
                 label="lastname"
@@ -134,74 +160,41 @@ export default function Form() {
                 variant="outlined"
               />
             </div>
-           
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Institution/Affliation/Company</label>
+              <label className={classes.textLabel}>Date of Birth:</label>
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <DatePicker
+                  ref={daob}
+                  value={startDate}
+                  onChange={setStartDate}
+                  InputProps={{
+                    className: classes.textInput,
+                  }}
+                  required
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
+            </div>
+
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Phone number:</label>
               <TextField
                 id="outlined-basic"
-                label="(optional)"
-                placeholder="(optional)"
-                type="text"
-                ref={cpname}
-                value={Cp_name}
-                onChange={(e) => setCpname(e.target.value)}
+                label="contact"
+                type="number"
+                ref={contact}
+                value={con_tact}
+                onChange={(e) => setContact(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
                 }}
-               
+                required
                 variant="outlined"
               />
             </div>
+
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Designation</label>
-              <TextField
-                id="outlined-basic"
-                label="deignation"
-                placeholder="deisgnation"
-                ref={designation}
-                value={desi}
-                placeholder="designation"
-                onChange={(e) => setDesig(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
-                
-                variant="outlined"
-              />
-            </div>
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Dept/Unit</label>
-              <TextField
-                id="outlined-basic"
-                label="dept/unit"
-                placeholder="dept/unit"
-                ref={deptm}
-                value={dept}
-                placeholder="dept/unit"
-                onChange={(e) => setDept(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
-                
-                variant="outlined"
-              />
-            </div>
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Address</label>
-              <TextareaAutosize
-                aria-label="minimum height"
-                minRows={3}
-                ref={address}
-                value={add}
-                placeholder="address"
-                onChange={(e) => setAdd(e.target.value)}
-                className={classes.textInput}
-                
-                variant="outlined"
-              />
-            </div>
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Email</label>
+              <label className={classes.textLabel}>Email:</label>
               <TextField
                 id="outlined-basic"
                 label="Email"
@@ -217,26 +210,104 @@ export default function Form() {
                 variant="outlined"
               />
             </div>
+
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Phone number</label>
+              <label className={classes.textLabel}>
+                Institution/Affliation/Company:
+              </label>
               <TextField
                 id="outlined-basic"
-                label="contact"
-                type="number"
-                ref={contact}
-                value={con_tact}
-                onChange={(e) => setContact(e.target.value)}
+                label="company"
+                type="text"
+                ref={cpname}
+                value={Cp_name}
+                onChange={(e) => setCpname(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
                 }}
-                required
                 variant="outlined"
               />
             </div>
-       
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Designation:</label>
+              <TextField
+                id="outlined-basic"
+                label="deignation"
+                placeholder="deisgnation"
+                ref={designation}
+                value={desi}
+                placeholder="designation"
+                onChange={(e) => setDesig(e.target.value)}
+                InputProps={{
+                  className: classes.textInput,
+                }}
+                variant="outlined"
+              />
+            </div>
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Dept/Unit:</label>
+              <TextField
+                id="outlined-basic"
+                label="dept/unit"
+                placeholder="dept/unit"
+                ref={deptm}
+                value={dept}
+                placeholder="dept/unit"
+                onChange={(e) => setDept(e.target.value)}
+                InputProps={{
+                  className: classes.textInput,
+                }}
+                variant="outlined"
+              />
+            </div>
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Address:</label>
+              <TextareaAutosize
+                aria-label="minimum height"
+                minRows={3}
+                ref={address}
+                value={add}
+                placeholder="address"
+                onChange={(e) => setAdd(e.target.value)}
+                className={classes.textInput}
+                variant="outlined"
+              />
+            </div>
+
 
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Area of Interset</label>
+              <label className={classes.textLabel}>Country of Residence:</label>
+              <Autocomplete
+                id="country-select-demo"
+                sx={{ width: 300 }}
+                options={countries}
+                autoHighlight
+                getOptionLabel={(option) => option.label}
+                renderOption={(props, option) => (
+                  <Box
+                    component="li"
+                    sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
+                    {...props}
+                  >
+                   
+                    {option.label} ({option.code}) +{option.phone}
+                  </Box>
+                )}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                   
+                    inputProps={{
+                      className: classes.textInput,
+                      ...params.inputProps,
+                      autoComplete: 'new-password', 
+                    }}
+                  />
+                )}
+              />
+            </div>
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Area of Interset:</label>
 
               <Select
                 labelId="demo-simple-select-label"
@@ -295,7 +366,7 @@ export default function Form() {
               </Select>
             </div>
             <div className={classes.labelAlign}>
-            <label className={classes.textLabel}>Attend Event In ?</label>
+              <label className={classes.textLabel}>Attend Event In ?</label>
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
                 defaultValue="In person"
@@ -314,7 +385,6 @@ export default function Form() {
                   control={<Radio />}
                   label="Virtual"
                 />
-               
               </RadioGroup>
             </div>
 
@@ -331,8 +401,8 @@ export default function Form() {
           </div>
         </form>
       </div>
-      <hr/>
-      <Footer/>
+      <hr />
+      <Footer />
     </React.Fragment>
   );
 }
