@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     scontainer:{
         display:'flex',
         flexDirection:'row',
+        justifyContent:'space-between',
         '@media screen and (max-width:480px)':{
             flexDirection:'column'
         }
@@ -17,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
         width: "200px",
         height: "200px",
         marginLeft:'10px',
-        paddingRight:'50px',
+        borderRadius:'50px',
+
       '@media screen and (max-width:480px)':{
         width: "200px",
         height: "200px",
@@ -34,7 +36,12 @@ const useStyles = makeStyles((theme) => ({
       dimages:{
           width:'150px',
           height:'100px',
-          marginLeft:'10px'
+          marginLeft:'10px',
+          borderRadius:'10px'
+      },
+      container:{
+          marginBottom:'21px',
+
       }
 
 
@@ -44,7 +51,7 @@ export default function Organize(){
     const classes = useStyles();
 
     return(
-        <div className={classes.container}>
+        <div data-aos="fade-right" className={classes.container}>
               <div className={classes.scontainer}>
                   <div className={classes.part1}>
                   <h3 className={classes.text}>Hosted By</h3>
@@ -56,7 +63,7 @@ export default function Organize(){
                   </div>
               </div>
 
-              
+              <div data-aos="fade-left">
               <h3 className={classes.text}>Partners</h3>
               <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className={classes.partners}>
                 <Grid item xs={2} sm={4} md={4}>
@@ -69,7 +76,10 @@ export default function Organize(){
                     <img src={Nile} className={classes.dimages}/>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <img src={Nile} className={classes.dimages}/>
+                    <img src={part1} className={classes.dimages}/>
+                </Grid>
+                <Grid item xs={2} sm={4} md={4}>
+                    <img src={part1} className={classes.dimages}/>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
                     <img src={Nile} className={classes.dimages}/>
@@ -78,12 +88,10 @@ export default function Organize(){
                     <img src={Nile} className={classes.dimages}/>
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <img src={Nile} className={classes.dimages}/>
-                </Grid>
-                <Grid item xs={2} sm={4} md={4}>
-                    <img src={Nile} className={classes.dimages}/>
+                    <img src={part1} className={classes.dimages}/>
                 </Grid>
               </Grid>
+              </div>
               </div>
     )
 }
