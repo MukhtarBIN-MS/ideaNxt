@@ -1,6 +1,9 @@
 import * as React from "react";
 import { makeStyles } from '@material-ui/styles';
-
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme)=>({
@@ -64,7 +67,7 @@ const useStyles = makeStyles((theme)=>({
         alignItems:'center',
         marginLeft:'590px',
         '@media screen and (max-width:480px)':{
-            marginLeft:'90px',
+            marginLeft:'100px',
         }
       
     },
@@ -74,7 +77,10 @@ const useStyles = makeStyles((theme)=>({
         fontFamily:'nunito',
         paddingBottom:'1px'
     },
-    iconI:{}
+    media:{
+        textDecoration:'none',
+        color:'black'
+    }
  
  }))
 
@@ -108,10 +114,10 @@ export default function Footer() {
        
          <h4 className={classes.tetx}>Stay Connected</h4>
          <div className={classes.icons}>
-           <i class='fa fa-facebook-square' aria-hidden="true"></i>
-           <i class="fa fa-instagram" style={{color:'black'}} ></i>
-           <i class="fa fa-twitter-square"></i>
-           <i class="fa fa-linkedin-square"></i>
+           <Link className={classes.media} to="/#"><i class='fa fa-facebook-square' aria-hidden="true"></i></Link>
+           <Link className={classes.media}  to="/#"><i class="fa fa-instagram" style={{color:'black'}} ></i></Link>
+           <Link className={classes.media} to="/#"><i class="fa fa-twitter-square"></i></Link>
+           <Link className={classes.media} to="/#"><i class="fa fa-linkedin-square"></i></Link>
         </div>
      
        <p className={classes.footerText}>Copyright<span>&#169;</span> Nationwide Integrated Software Solutions Consults 2022 </p>
