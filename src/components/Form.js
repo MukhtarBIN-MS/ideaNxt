@@ -82,7 +82,7 @@ export default function Form() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [eml, setEml] = useState("");
-  const [add, setAdd] = useState();
+  const [add, setAdd] = useState("");
   const [Cp_name, setCpname] = useState("");
   const [con_tact, setContact] = useState("");
   const [sec_tion, setSection] = useState("");
@@ -111,7 +111,7 @@ export default function Form() {
 
     }
     try{
-
+      await console.log(data);
     }catch(err){
       console.log(err)
     }
@@ -236,7 +236,6 @@ export default function Form() {
                 placeholder="deisgnation"
                 ref={designation}
                 value={desi}
-                placeholder="designation"
                 onChange={(e) => setDesig(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
@@ -252,7 +251,6 @@ export default function Form() {
                 placeholder="dept/unit"
                 ref={deptm}
                 value={dept}
-                placeholder="dept/unit"
                 onChange={(e) => setDept(e.target.value)}
                 InputProps={{
                   className: classes.textInput,
@@ -281,6 +279,7 @@ export default function Form() {
                 id="country-select-demo"
                 sx={{ width: 300 }}
                 options={countries}
+                value={cont}
                 autoHighlight
                 getOptionLabel={(option) => option.label}
                 renderOption={(props, option) => (
@@ -401,7 +400,7 @@ export default function Form() {
           </div>
         </form>
       </div>
-      <hr />
+     
       <Footer />
     </React.Fragment>
   );

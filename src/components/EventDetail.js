@@ -8,7 +8,7 @@ import { Button } from '@material-ui/core';
 const useStyles = makeStyles((theme)=>({
     root:{
        marginTop:'10px',
-       marginBottom:'30px',
+      
     },
        eventside:{
         background:'linear-gradient(to right, #29467f, #101c32)',
