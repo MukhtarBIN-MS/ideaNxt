@@ -8,6 +8,7 @@ import EventShedule from "./components/EventShedule";
 import EventDetail from "./components/EventDetail";
 import Register from './components/Register'
 import Footer from "./components/Footer";
+import Organize from './components/Organize';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +47,7 @@ export default function App() {
         <br></br>
     
         <EventDetail />
-        
+        <Organize/>
         <Footer />
       </div>
     </React.Fragment>

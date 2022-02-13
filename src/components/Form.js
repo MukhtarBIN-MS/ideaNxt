@@ -106,8 +106,8 @@ export default function Form() {
       Section : section.current.value,
       Attend_In : attend.current.value,
       Designation: designation.current.value,
-      Department: dept.current.value,
-      Country: contr.current.value
+      Department: deptm.current.value,
+
 
     }
     try{
@@ -234,6 +234,7 @@ export default function Form() {
                 id="outlined-basic"
                 label="deignation"
                 placeholder="deisgnation"
+                type="text"
                 ref={designation}
                 value={desi}
                 onChange={(e) => setDesig(e.target.value)}
@@ -249,6 +250,7 @@ export default function Form() {
                 id="outlined-basic"
                 label="dept/unit"
                 placeholder="dept/unit"
+                type="text"
                 ref={deptm}
                 value={dept}
                 onChange={(e) => setDept(e.target.value)}
@@ -273,38 +275,7 @@ export default function Form() {
             </div>
 
 
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Country of Residence:</label>
-              <Autocomplete
-                id="country-select-demo"
-                sx={{ width: 300 }}
-                options={countries}
-                value={cont}
-                autoHighlight
-                getOptionLabel={(option) => option.label}
-                renderOption={(props, option) => (
-                  <Box
-                    component="li"
-                    sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-                    {...props}
-                  >
-                   
-                    {option.label} ({option.code}) +{option.phone}
-                  </Box>
-                )}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                   
-                    inputProps={{
-                      className: classes.textInput,
-                      ...params.inputProps,
-                      autoComplete: 'new-password', 
-                    }}
-                  />
-                )}
-              />
-            </div>
+       
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Area of Interset:</label>
 
