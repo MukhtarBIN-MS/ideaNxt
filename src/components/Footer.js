@@ -57,11 +57,15 @@ const useStyles = makeStyles((theme)=>({
         fontFamily:'nunito'
     },
     icons:{
-        display:'flex',
-        flexDirection:'row',
+        display:'inline-flex',
+        flexWrap:'wrap',
+        gap:'35px',
         justifyContent:'center',
         alignItems:'center',
-        margin:'10px'
+        marginLeft:'590px',
+        '@media screen and (max-width:480px)':{
+            marginLeft:'90px',
+        }
       
     },
     footerLink:{
@@ -101,15 +105,15 @@ export default function Footer() {
            <a className={classes.footerLink}  href="#">Mail Us</a>
        </div>
        </div>
-       <div className={classes.socialM}>
+       
          <h4 className={classes.tetx}>Stay Connected</h4>
          <div className={classes.icons}>
-           <i className={classes.iconI} class='fa fa-facebook-square' aria-hidden="true"></i>
-           <i className={classes.iconI} class="fa fa-instagram" style={{color:'black'}} ></i>
-           <i className={classes.iconI} class="fa fa-twitter-square"></i>
-           <i className={classes.iconI} class="fa fa-linkedin-square"></i>
+           <i class='fa fa-facebook-square' aria-hidden="true"></i>
+           <i class="fa fa-instagram" style={{color:'black'}} ></i>
+           <i class="fa fa-twitter-square"></i>
+           <i class="fa fa-linkedin-square"></i>
         </div>
-       </div>
+     
        <p className={classes.footerText}>Copyright<span>&#169;</span> Nationwide Integrated Software Solutions Consults 2022 </p>
       </div>
   );
