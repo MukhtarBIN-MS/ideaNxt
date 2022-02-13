@@ -41,13 +41,14 @@ export default function App() {
       </div>
       <div className={classes.container}>
         <EventTitle />
+        <Organize/>
         <EventShedule />
         <Register/>
         <br></br>
         <br></br>
     
         <EventDetail />
-        <Organize/>
+        
         <Footer />
       </div>
     </React.Fragment>
