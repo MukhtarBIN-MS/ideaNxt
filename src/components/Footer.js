@@ -93,7 +93,7 @@ export default function Footer() {
        <p className={classes.footerText2}>Abuja Innovation Fair Seeks to bring together startups,
               multinationals, investors, incubators universities and
               polytechnics, research institutes, government agencies from
-              Nigeria and overseas participating the conferences</p>
+              Nigeria and overseas To participate in the 2022 Abuja Trade fair.</p>
        <div className={classes.links}>
        <div className={classes.colums}>
            <h4>Resources</h4>
