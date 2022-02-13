@@ -78,7 +78,7 @@ export default function Footer() {
     const classes = useStyles();
   return (
     <div className="footerr">
-        <hr/>
+     
        <p className={classes.footerText1}>About Us</p>
        <p className={classes.footerText2}>Abuja Innovation Fair Seeks to bring together startups,
               multinationals, investors, incubators universities and

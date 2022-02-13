@@ -399,8 +399,9 @@ export default function Form() {
             </center>
           </div>
         </form>
+        <hr/>
       </div>
-     
+       
       <Footer />
     </React.Fragment>
   );
