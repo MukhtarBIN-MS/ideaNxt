@@ -1,21 +1,8 @@
 import React, { useRef, useState } from "react";
 import axios from "axios";
 import { makeStyles } from "@material-ui/styles";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import Radio from "@mui/material/Radio";
-import InputLabel from "@mui/material/InputLabel";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import DatePicker from "@mui/lab/DatePicker";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
-import { countries } from "./Countries";
-import Box from "@mui/material/Box";
-import Autocomplete from "@mui/material/Autocomplete";
 import Footer from "./Footer";
 
 //List of countries to populate in Autofill select
@@ -114,6 +101,7 @@ export default function Form() {
       contr: contr.current.value,
     };
     try {
+      await axios.post("http://localhost:5000/api/register", data);
       await console.log(data);
     } catch (err) {
       console.log(err);
@@ -529,7 +517,7 @@ export default function Form() {
             </div>
 
             <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Area of Interset:</label>
+              <label className={classes.textLabel}>Section to Attend:</label>
 
               <select
                 labelId="demo-simple-select-label"
@@ -541,6 +529,9 @@ export default function Form() {
                 variant="outlined"
                 defaultValue="select"
               >
+                <option value="Drone Technology Forum">
+                  Drone Technology Forum
+                </option>
                 <option value="Trade and Investment Innovation Town Hall">
                   Trade and Investment Innovation Town Hall
                 </option>
@@ -566,9 +557,6 @@ export default function Form() {
                 </option>
                 <option value="Semiconductor and Chipmaking Forum">
                   Semiconductor and Chipmaking Forum
-                </option>
-                <option value="Drone Technology Forum">
-                  Drone Technology Forum
                 </option>
                 <option value="Satellite Internet Communication Forum">
                   Satellite Internet Communication Forum
