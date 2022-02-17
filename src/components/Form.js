@@ -13,7 +13,7 @@ import DatePicker from "@mui/lab/DatePicker";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
-import {countries} from "./Countries";
+import { countries } from "./Countries";
 import Box from "@mui/material/Box";
 import Autocomplete from "@mui/material/Autocomplete";
 import Footer from "./Footer";
@@ -40,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
   textInput: {
     width: "250px",
     height: "40px",
+    borderRadius: "7px",
+    background: "snow",
+    color: "black",
     marginBottom: "10px",
     marginTop: "10px",
   },
@@ -63,6 +66,10 @@ const useStyles = makeStyles((theme) => ({
   form: {
     marginBottom: "15px",
   },
+  nitext: {
+    fontFamily: "nunito",
+    padding: "5px",
+  },
 }));
 
 export default function Form() {
@@ -76,7 +83,6 @@ export default function Form() {
   const attend = useRef();
   const designation = useRef();
   const deptm = useRef();
-  const daob = useRef();
   const contr = useRef();
 
   const [fname, setFname] = useState("");
@@ -90,30 +96,27 @@ export default function Form() {
   const [desi, setDesig] = useState("");
   const [dept, setDept] = useState("");
   const [cont, setCont] = useState("");
-  const [startDate, setStartDate] = useState(new Date());
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const data = {
-      Firstname: Fname.current.value,
-      LastName:  Lname.current.value,
-      DOB:       daob.current.value,
-      Email:     Email.current.value,
-      Address:   address.current.value,
-      Company_name: cpname.current.value,
-      Contact: contact.current.value,
-      Section : section.current.value,
-      Attend_In : attend.current.value,
-      Designation: designation.current.value,
-      Department: deptm.current.value,
-
-
-    }
-    try{
+      Fname: Fname.current.value,
+      Lname: Lname.current.value,
+      Email: Email.current.value,
+      address: address.current.value,
+      cpname: cpname.current.value,
+      contact: contact.current.value,
+      section: section.current.value,
+      attend: attend.current.value,
+      designation: designation.current.value,
+      deptm: deptm.current.value,
+      contr: contr.current.value,
+    };
+    try {
       await console.log(data);
-    }catch(err){
-      console.log(err)
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -128,7 +131,7 @@ export default function Form() {
           <div className={classes.textInputContainer}>
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>First Name:</label>
-              <TextField
+              <input
                 id="outlined-basic"
                 label="firstname"
                 ref={Fname}
@@ -136,16 +139,14 @@ export default function Form() {
                 placeholder="Firstname"
                 type="text"
                 onChange={(e) => setFname(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
+                className={classes.textInput}
                 required
                 variant="outlined"
               />
             </div>
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Last Name:</label>
-              <TextField
+              <input
                 id="outlined-basic"
                 label="lastname"
                 ref={Lname}
@@ -153,41 +154,22 @@ export default function Form() {
                 placeholder="Last name"
                 type="text"
                 onChange={(e) => setLname(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
+                className={classes.textInput}
                 required
                 variant="outlined"
               />
             </div>
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Date of Birth:</label>
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <DatePicker
-                  ref={daob}
-                  value={startDate}
-                  onChange={setStartDate}
-                  InputProps={{
-                    className: classes.textInput,
-                  }}
-                  required
-                  renderInput={(params) => <TextField {...params} />}
-                />
-              </LocalizationProvider>
-            </div>
 
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Phone number:</label>
-              <TextField
+              <input
                 id="outlined-basic"
                 label="contact"
                 type="number"
                 ref={contact}
                 value={con_tact}
                 onChange={(e) => setContact(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
+                className={classes.textInput}
                 required
                 variant="outlined"
               />
@@ -195,7 +177,7 @@ export default function Form() {
 
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Email:</label>
-              <TextField
+              <input
                 id="outlined-basic"
                 label="Email"
                 placeholder="Email"
@@ -203,9 +185,7 @@ export default function Form() {
                 ref={Email}
                 value={eml}
                 onChange={(e) => setEml(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
+                className={classes.textInput}
                 required
                 variant="outlined"
               />
@@ -215,22 +195,20 @@ export default function Form() {
               <label className={classes.textLabel}>
                 Institution/Affliation/Company:
               </label>
-              <TextField
+              <input
                 id="outlined-basic"
                 label="company"
                 type="text"
                 ref={cpname}
                 value={Cp_name}
                 onChange={(e) => setCpname(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
+                className={classes.textInput}
                 variant="outlined"
               />
             </div>
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Designation:</label>
-              <TextField
+              <input
                 id="outlined-basic"
                 label="deignation"
                 placeholder="deisgnation"
@@ -238,15 +216,13 @@ export default function Form() {
                 ref={designation}
                 value={desi}
                 onChange={(e) => setDesig(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
+                className={classes.textInput}
                 variant="outlined"
               />
             </div>
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Dept/Unit:</label>
-              <TextField
+              <input
                 id="outlined-basic"
                 label="dept/unit"
                 placeholder="dept/unit"
@@ -254,9 +230,7 @@ export default function Form() {
                 ref={deptm}
                 value={dept}
                 onChange={(e) => setDept(e.target.value)}
-                InputProps={{
-                  className: classes.textInput,
-                }}
+                className={classes.textInput}
                 variant="outlined"
               />
             </div>
@@ -273,13 +247,25 @@ export default function Form() {
                 variant="outlined"
               />
             </div>
+            <div className={classes.labelAlign}>
+              <label className={classes.textLabel}>Country of residence:</label>
+              <input
+                id="outlined-basic"
+                label="country"
+                placeholder="Country"
+                type="text"
+                ref={contr}
+                value={cont}
+                onChange={(e) => setCont(e.target.value)}
+                className={classes.textInput}
+                variant="outlined"
+              />
+            </div>
 
-
-       
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Area of Interset:</label>
 
-              <Select
+              <select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 ref={section}
@@ -289,73 +275,65 @@ export default function Form() {
                 variant="outlined"
                 defaultValue="select"
               >
-                <MenuItem value="Trade and Investment Innovation Town Hall">
+                <option value="Trade and Investment Innovation Town Hall">
                   Trade and Investment Innovation Town Hall
-                </MenuItem>
-                <MenuItem value=" Al and Robotics Town Hall">
+                </option>
+                <option value=" Al and Robotics Town Hall">
                   {" "}
                   Al and Robotics Town Hall
-                </MenuItem>
-                <MenuItem value="Electric Vehicle Innovation Town Hall">
+                </option>
+                <option value="Electric Vehicle Innovation Town Hall">
                   Electric Vehicle Innovation Town Hall
-                </MenuItem>
-                <MenuItem value="Innovation Hubs' Forum">
+                </option>
+                <option value="Innovation Hubs' Forum">
                   Innovation Hubs' Forum
-                </MenuItem>
-                <MenuItem value="Disruptive Starup Forum">
+                </option>
+                <option value="Disruptive Starup Forum">
                   Disruptive Starup Forum
-                </MenuItem>
-                <MenuItem value=" Telecoms and 5G Technologies Forum">
+                </option>
+                <option value=" Telecoms and 5G Technologies Forum">
                   {" "}
                   Telecoms and 5G Technologies Forum
-                </MenuItem>
-                <MenuItem value="Broadband Communication Forum">
+                </option>
+                <option value="Broadband Communication Forum">
                   Broadband Communication Forum
-                </MenuItem>
-                <MenuItem value="Semiconductor and Chipmaking Forum">
+                </option>
+                <option value="Semiconductor and Chipmaking Forum">
                   Semiconductor and Chipmaking Forum
-                </MenuItem>
-                <MenuItem value="Drone Technology Forum">
+                </option>
+                <option value="Drone Technology Forum">
                   Drone Technology Forum
-                </MenuItem>
-                <MenuItem value="Satellite Internet Communication Forum">
+                </option>
+                <option value="Satellite Internet Communication Forum">
                   Satellite Internet Communication Forum
-                </MenuItem>
-                <MenuItem value=" Renewable and Clean Energy Forum">
+                </option>
+                <option value=" Renewable and Clean Energy Forum">
                   {" "}
                   Renewable and Clean Energy Forum
-                </MenuItem>
-                <MenuItem value=" SmartAgriTech Forum">
+                </option>
+                <option value=" SmartAgriTech Forum">
                   {" "}
                   SmartAgriTech Forum
-                </MenuItem>
-                <MenuItem value="AR & VR Forum">
+                </option>
+                <option value="AR & VR Forum">
                   {" "}
                   Renewable and Clean Energy Forum
-                </MenuItem>
-              </Select>
+                </option>
+              </select>
             </div>
-            <div className={classes.labelAlign}>
+            <div
+              className={classes.labelAlign}
+              onChange={(e) => setAttend(e.target.value)}
+            >
               <label className={classes.textLabel}>Attend Event In ?</label>
-              <RadioGroup
-                aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="In person"
-                name="radio-buttons-group"
-                value={att_end}
-                ref={attend}
-                onChange={(e) => setAttend(e.target.value)}
-              >
-                <FormControlLabel
-                  value="In person"
-                  control={<Radio />}
-                  label="In person"
-                />
-                <FormControlLabel
-                  value="Virtual"
-                  control={<Radio />}
-                  label="Virtual"
-                />
-              </RadioGroup>
+              <label className={classes.nitext}>
+                <input type="radio" value="In_person" ref={attend} />
+                In person
+              </label>
+              <label className={classes.nitext}>
+                <input type="radio" value="Virtuall" ref={attend} />
+                Virtual
+              </label>
             </div>
 
             <center>
@@ -370,9 +348,9 @@ export default function Form() {
             </center>
           </div>
         </form>
-        <hr/>
+        <hr />
       </div>
-       
+
       <Footer />
     </React.Fragment>
   );
