@@ -98,7 +98,7 @@ export default function EventDetail(){
                  </Grid>
                  <Grid item xs={3}>
                   <Tickets 
-                        ticketTitle="FOR VENDORS(OUTDOOOR)"
+                        ticketTitle="FOR VENDORS(OUTDOOR)"
                         ticketQuantity="limited spaces are available at
                         Organizer's DISCRETION"
                       
@@ -122,7 +122,7 @@ export default function EventDetail(){
                 
                  <Grid item xs={3}>
                   <Tickets 
-                        ticketTitle="GOVERNMENT AGENCIES INTDOOR SPACE"
+                        ticketTitle="GOVERNMENT AGENCIES INDOOR SPACE"
                         ticketQuantity="Quantity in 36sqm"
                         ticketPrice="&#8358;45,000 per sqm"
                        
@@ -134,7 +134,7 @@ export default function EventDetail(){
 
                  <Grid item xs={3}>
                   <Tickets 
-                        ticketTitle="EMBASIS,TRADE PROMOTION AGENCIES"
+                        ticketTitle="EMBASSIES,TRADE PROMOTION AGENCIES"
                         ticketQuantity="Indoor pavilion only"
                         ticketPPrice="Cost is $1,200 per 9sqm with minimun of 72sqm"
                        
@@ -146,7 +146,7 @@ export default function EventDetail(){
 
                  <Grid item xs={3}>
                   <Tickets 
-                        ticketTitle="AfCFTA COUNTRIES: INDOOR AND OUTDORR"
+                        ticketTitle="AfCFTA COUNTRIES: INDOOR AND OUTDOOR"
                         ticketQuantity="Quantity in 9sqm"
                         ticketPrice="&#8358;25,000 per sqm"
                        

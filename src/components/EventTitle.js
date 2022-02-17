@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contentw11: {
     fontFamily: "nunito",
-    fontSize: "17px",
+    fontSize: "15px",
     textAlign:'justify',
     wordSpacing:'-2px',
     paddingLeft: "10px",
@@ -167,7 +167,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "700px",
-    height: "700px",
+    height: "300px",
     "@media screen and (max-width:480px)": {
       display: "none",
     },
@@ -230,20 +230,7 @@ export default function EventTitle() {
               organized by Nationwide Integrated Software Solutions Consults,
               APmultimedia, and Primost International Limited. </p>
               
-              <p className={classes.contentw11}>
-              In this maiden edition, we are focusing on the ‌innovating companies and startups
-              (both in Nigeria and overseas), from real estate developers
-              creating high-quality affordable housing, to those building
-              cheaper renewable energy technologies, and those connecting our
-              world through 5G network and Broadband Satellite internet
-              communications, to those in the automobile industries building
-              electric cars to mention but a few. The main goal of Abuja Expo is
-              to accelerate innovation-driven enterprises across the key sectors
-              of Nigerian Economy. Highlights of this maiden edition include
-              Innovation-driven Enterprise Summit, and town hall meetings (for
-              online and on-site), and an exhibition to promote innovative
-              products to potential buyers, distributors, investors and
-              collaborators. </p>
+
 
               <p className={classes.contentw11}>
               The key areas of interest are: Real Estate

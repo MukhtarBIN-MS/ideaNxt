@@ -67,7 +67,6 @@ export default function Form() {
   const cpname = useRef();
   const contact = useRef();
   const section = useRef();
-  const attend = useRef();
   const designation = useRef();
   const deptm = useRef();
   const contr = useRef();
@@ -79,7 +78,6 @@ export default function Form() {
   const [Cp_name, setCpname] = useState("");
   const [con_tact, setContact] = useState("");
   const [sec_tion, setSection] = useState("");
-  const [att_end, setAttend] = useState("");
   const [desi, setDesig] = useState("");
   const [dept, setDept] = useState("");
   const [cont, setCont] = useState("");
@@ -95,7 +93,6 @@ export default function Form() {
       cpname: cpname.current.value,
       contact: contact.current.value,
       section: section.current.value,
-      attend: attend.current.value,
       designation: designation.current.value,
       deptm: deptm.current.value,
       contr: contr.current.value,
@@ -575,25 +572,7 @@ export default function Form() {
                 </option>
               </select>
             </div>
-            <div className={classes.labelAlign} onChange={(e) => setAttend(e.target.value)}>
-              <label className={classes.textLabel}>Attend Event In ?</label>
-              <label className={classes.nitext}>
-                <input
-                  type="radio"
-                  value="In_person"
-                  ref={attend}    
-                />
-                In person
-              </label>
-              <label className={classes.nitext}>
-                <input
-                  type="radio"
-                  value="Virtuall"
-                  ref={attend}
-                />
-                Virtual
-              </label>
-            </div>
+    
 
             <center>
               <Button
