@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/styles";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Footer from "./Footer";
+import PopUp from "./PopUp";
 
 //List of countries to populate in Autofill select
 
@@ -82,6 +83,8 @@ export default function Form() {
   const [dept, setDept] = useState("");
   const [cont, setCont] = useState("");
 
+  const [modelisOpen, setModelisOpen] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -98,16 +101,28 @@ export default function Form() {
       contr: contr.current.value,
     };
     try {
-      await axios.post("http://localhost:5000/api/register", data);
+      await axios.post("http://localhost:5000/api/users/register", data)
+      .then((response) => {
+        if (response.data.status === "success") {
+          return(
+            <PopUp />
+          )
+         
+        } else if (response.data.status === "fail") {
+          alert("An error ocurrred");
+        }
+      });
       await console.log(data);
     } catch (err) {
       console.log(err);
     }
+    setModelisOpen(true);
   };
 
   const classes = useStyles();
   return (
     <React.Fragment>
+     
       <div className={classes.Rcontainer}>
         <h2 className={classes.title}>Register to Attend</h2>
       </div>
@@ -241,7 +256,9 @@ export default function Form() {
                 value={cont}
                 onChange={(e) => setCont(e.target.value)}
               >
-                <option selected value="Nigeria">Nigeria</option>
+                <option selected value="Nigeria">
+                  Nigeria
+                </option>
                 <option value="Afganistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -408,7 +425,7 @@ export default function Form() {
                 <option value="New Zealand">New Zealand</option>
                 <option value="Nicaragua">Nicaragua</option>
                 <option value="Niger">Niger</option>
-                
+
                 <option value="Niue">Niue</option>
                 <option value="Norfolk Island">Norfolk Island</option>
                 <option value="Norway">Norway</option>
@@ -572,7 +589,6 @@ export default function Form() {
                 </option>
               </select>
             </div>
-    
 
             <center>
               <Button
