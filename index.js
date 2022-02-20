@@ -25,7 +25,7 @@ app.use(cors());
 
 
 
-app.use('/api/register', usersRoutes);
+app.use('/api/users', usersRoutes);
 app.use('/', (req, res)=>{
   res.send('Hello');
 })

@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
+
 const userSchema = new mongoose.Schema({
     Firstname:{
         type:String,
@@ -18,8 +19,7 @@ const userSchema = new mongoose.Schema({
     Phone:{
         type:Number,
         require:true,
-        min:11,
-        max:11,
+
     },
     Company:{
         type:String,
@@ -76,6 +76,6 @@ const userSchema = new mongoose.Schema({
 {timestamps:true}
 );
 
-const userModel = mongoose.model('UserMode', userSchema);
+const userModel = mongoose.model('UserModel', userSchema);
 
 export default userModel;
