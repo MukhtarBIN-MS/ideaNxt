@@ -21,27 +21,7 @@ const userSchema = new mongoose.Schema({
         require:true,
 
     },
-    Company:{
-        type:String,
-        require:true,
-        min:3,
-        max:20,
-       
-    },
-    Designation:{
-        type:String,
-        require:true,
-        min:3,
-        max:20,
-       
-    },
-    Department:{
-        type:String,
-        require:true,
-        min:3,
-        max:20,
-       
-    },
+
     Email:{
         type:String,
         required:true,

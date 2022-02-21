@@ -3,18 +3,14 @@ import userModel from "../models/User.js";
 
 export const registerUsers = async (req, res) => {
   try {
-
     const user = {
       Firstname: req.body.Fname,
       Lastname: req.body.Lname,
       Email: req.body.Email,
       Phone: req.body.contact,
-      Company: req.body.cpname,
-      Designation: req.body.designation,
-      Dept: req.body.deptm,
       Address: req.body.address,
       Country: req.body.contr,
-      Section: req.body.section ,
+      Section: req.body.section,
     };
 
     const newUser = new userModel(user);
@@ -26,6 +22,3 @@ export const registerUsers = async (req, res) => {
     console.log(error);
   }
 };
-
-
- 
