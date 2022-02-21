@@ -5,9 +5,9 @@ import { makeStyles } from "@material-ui/styles";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Footer from "./Footer";
-import PopUp from "./PopUp";
 
-//List of countries to populate in Autofill select
+
+
 
 const useStyles = makeStyles((theme) => ({
   Rcontainer: {
@@ -93,17 +93,7 @@ export default function Form() {
       contr: contr.current.value,
     };
     try {
-      await axios.post("http://localhost:5000/api/users/register", data)
-      .then((response) => {
-        if (response.data.status === 201) {
-          return(
-            <PopUp />
-          )
-         
-        } else if (response.data.status === "fail") {
-          alert("An error ocurrred");
-        }
-      });
+      await axios.post("http://localhost:5000/api/users/register", data);
       navigate('/popup');
       await console.log(data);
     } catch (err) {
