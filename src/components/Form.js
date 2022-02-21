@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { makeStyles } from "@material-ui/styles";
 import Button from "@mui/material/Button";
@@ -65,23 +66,19 @@ export default function Form() {
   const Lname = useRef();
   const Email = useRef();
   const address = useRef();
- 
   const contact = useRef();
   const section = useRef();
-
   const contr = useRef();
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [eml, setEml] = useState("");
   const [add, setAdd] = useState("");
-
   const [con_tact, setContact] = useState("");
   const [sec_tion, setSection] = useState("");
-
   const [cont, setCont] = useState("");
 
-
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,13 +90,12 @@ export default function Form() {
       address: address.current.value,
       contact: contact.current.value,
       section: section.current.value,
-
       contr: contr.current.value,
     };
     try {
       await axios.post("http://localhost:5000/api/users/register", data)
       .then((response) => {
-        if (response.ok) {
+        if (response.data.status === 201) {
           return(
             <PopUp />
           )
@@ -108,6 +104,7 @@ export default function Form() {
           alert("An error ocurrred");
         }
       });
+      navigate('/popup');
       await console.log(data);
     } catch (err) {
       console.log(err);

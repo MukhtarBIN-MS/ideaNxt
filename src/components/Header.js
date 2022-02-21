@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/styles";
 import { NavbarItems } from "./NavbarItems";
-import logo from '../Images/logo.png'
+
 
 const useStyles = makeStyles((theme) => ({
       navbarItems:{
@@ -119,7 +119,6 @@ export default function Header() {
   const classes = useStyles();
   return (
     <nav className={classes.navbarItems}>
-      <h1 className={classes.logo}></h1>
       <div className={classes.menuIcon} onClick={handleClick}>
         <span className={click ? 'fas fa-times': 'fas fa-bars'}></span>
       </div>
