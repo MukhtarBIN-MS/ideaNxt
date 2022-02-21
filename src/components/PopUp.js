@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import {
-    BrowserRouter as Router,
+ 
     Link
   } from "react-router-dom";
   import success from "../Images/successful.png";
@@ -62,18 +62,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PopUp(){
 
-    const [isOpen, setIsOpen] = useState(false);
-    const hanldeClose = ()=>{
-        setIsOpen(!isOpen);
-    }
     const classes = useStyles();
     return(
         
         <div className={classes.popUpbox}>
             <div className={classes.box}>
                 
-               <center><img src={success} className={classes.image}/></center> 
-                <h5 className={classes.text}>Congratulations You have successfully register for Abuja Innovation fair</h5>
+               <center><img src={success} className={classes.image} alt="successful" /></center> 
+                <h5 className={classes.text}>Congratulations You have successfully registered for Abuja Innovation fair</h5>
                 <center><Link to="/"><button className={classes.btn}>Ok
                      </button></Link></center>
             </div>

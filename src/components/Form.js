@@ -65,25 +65,23 @@ export default function Form() {
   const Lname = useRef();
   const Email = useRef();
   const address = useRef();
-  const cpname = useRef();
+ 
   const contact = useRef();
   const section = useRef();
-  const designation = useRef();
-  const deptm = useRef();
+
   const contr = useRef();
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [eml, setEml] = useState("");
   const [add, setAdd] = useState("");
-  const [Cp_name, setCpname] = useState("");
+
   const [con_tact, setContact] = useState("");
   const [sec_tion, setSection] = useState("");
-  const [desi, setDesig] = useState("");
-  const [dept, setDept] = useState("");
+
   const [cont, setCont] = useState("");
 
-  const [modelisOpen, setModelisOpen] = useState(false);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,17 +91,15 @@ export default function Form() {
       Lname: Lname.current.value,
       Email: Email.current.value,
       address: address.current.value,
-      cpname: cpname.current.value,
       contact: contact.current.value,
       section: section.current.value,
-      designation: designation.current.value,
-      deptm: deptm.current.value,
+
       contr: contr.current.value,
     };
     try {
       await axios.post("http://localhost:5000/api/users/register", data)
       .then((response) => {
-        if (response.data.status === "success") {
+        if (response.ok) {
           return(
             <PopUp />
           )
@@ -116,13 +112,13 @@ export default function Form() {
     } catch (err) {
       console.log(err);
     }
-    setModelisOpen(true);
+
   };
 
   const classes = useStyles();
   return (
     <React.Fragment>
-     
+    
       <div className={classes.Rcontainer}>
         <h2 className={classes.title}>Register to Attend</h2>
       </div>
@@ -192,49 +188,6 @@ export default function Form() {
               />
             </div>
 
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>
-                Institution/Affliation/Company:
-              </label>
-              <input
-                id="outlined-basic"
-                label="company"
-                type="text"
-                ref={cpname}
-                value={Cp_name}
-                onChange={(e) => setCpname(e.target.value)}
-                className={classes.textInput}
-                variant="outlined"
-              />
-            </div>
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Designation:</label>
-              <input
-                id="outlined-basic"
-                label="deignation"
-                placeholder="deisgnation"
-                type="text"
-                ref={designation}
-                value={desi}
-                onChange={(e) => setDesig(e.target.value)}
-                className={classes.textInput}
-                variant="outlined"
-              />
-            </div>
-            <div className={classes.labelAlign}>
-              <label className={classes.textLabel}>Dept/Unit:</label>
-              <input
-                id="outlined-basic"
-                label="dept/unit"
-                placeholder="dept/unit"
-                type="text"
-                ref={deptm}
-                value={dept}
-                onChange={(e) => setDept(e.target.value)}
-                className={classes.textInput}
-                variant="outlined"
-              />
-            </div>
             <div className={classes.labelAlign}>
               <label className={classes.textLabel}>Address:</label>
               <TextareaAutosize
