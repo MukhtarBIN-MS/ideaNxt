@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { makeStyles } from "@material-ui/styles";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Footer from "./Footer";
-
-
-
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import Stack from '@mui/material/Stack';
 
 const useStyles = makeStyles((theme) => ({
   Rcontainer: {
@@ -94,18 +94,16 @@ export default function Form() {
     };
     try {
       await axios.post("http://localhost:5000/api/users/register", data);
-      navigate('/popup');
+      navigate("/popup");
       await console.log(data);
     } catch (err) {
       console.log(err);
     }
-
   };
 
   const classes = useStyles();
   return (
     <React.Fragment>
-    
       <div className={classes.Rcontainer}>
         <h2 className={classes.title}>Register to Attend</h2>
       </div>
@@ -529,7 +527,15 @@ export default function Form() {
                 </option>
               </select>
             </div>
-
+            <div className={classes.labelAlign}>
+            <Stack sx={{ width: '90%' }} spacing={2}>
+              <Alert severity="info">
+                <AlertTitle>Info</AlertTitle>
+                The entry fee for a single person is <strong>&#8358;200</strong><br/>
+                Enjoy your Trade fair !!
+              </Alert>
+              </Stack>
+            </div>
             <center>
               <Button
                 type="submit"
