@@ -46,14 +46,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "10px",
   },
   button: {
-    width: "100px",
-
+    width: "130px",
     marginTop: "30px",
     alignItems: "center",
     justifyContent: "center",
   },
   form: {
-    marginBottom: "15px",
+    marginBottom: "50px",
   },
   nitext: {
     fontFamily: "nunito",
@@ -472,8 +471,6 @@ export default function Form() {
               <label className={classes.textLabel}>Section to Attend:</label>
 
               <select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
                 ref={section}
                 value={sec_tion}
                 onChange={(e) => setSection(e.target.value)}
@@ -537,6 +534,7 @@ export default function Form() {
               </Stack>
             </div>
             <center>
+              
               <Button
                 type="submit"
                 className={classes.button}
@@ -546,11 +544,12 @@ export default function Form() {
                 Register
               </Button>
             </center>
+           
           </div>
+     
         </form>
-        <hr />
       </div>
-
+      <hr />
       <Footer />
     </React.Fragment>
   );

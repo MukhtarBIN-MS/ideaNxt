@@ -1,5 +1,5 @@
 import React from "react";
-import { cssBaseline } from "@material-ui/core";
+import { CssBaseline } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import cover from "./Images/cover.png";
 import Header from "./components/Header";
@@ -36,7 +36,7 @@ export default function App() {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <cssBaseline />
+        <CssBaseline />
         <Header/>
       </div>
       <div className={classes.container}>
