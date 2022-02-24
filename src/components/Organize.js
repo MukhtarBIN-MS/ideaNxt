@@ -32,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
     },
     ddimage:{
         objectFit: "contain",
-        width: "250px",
-        height: "250px",
+        width: "200px",
+        height: "200px",
         marginLeft:'10px',
         borderRadius:'50px',
 
@@ -82,7 +82,7 @@ export default function Organize(){
               <div className={classes.scontainer}>
                   <div className={classes.part1}>
                   <h3 className={classes.text}>Hosted By <span className={classes.arrow}>&#xbb;</span></h3>
-                  <img src={Nile} alt="nile_pic" className={classes.image}/>
+                  <img src={Nile} alt="nile_pic" className={classes.ddimage}/>
                   </div>
                   <div className={classes.part2}>
                   <h3 className={classes.text}>Organised By <span className={classes.arrow}>&#xbb;</span></h3>
