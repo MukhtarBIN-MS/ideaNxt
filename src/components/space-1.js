@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
           button: {
             width: "130px",
             marginTop: "30px",
+           
             alignItems: "center",
             justifyContent: "center",
           },
