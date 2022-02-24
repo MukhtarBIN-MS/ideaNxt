@@ -8,6 +8,7 @@ import "./index.css";
 import App from './App';
 import Form from './components/Form'
 import PopUp from './components/PopUp'
+import Space1 from './components/space-1';
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
           <Route exact={true} path="/" element={<App/>}/>
           <Route  path="/register" element={<Form/>}/>
           <Route  path="/popup" element={<PopUp/>}/>
+          <Route  path="/space-1" element={<Space1/>}/>
         </Routes>
     </Router> 
   
