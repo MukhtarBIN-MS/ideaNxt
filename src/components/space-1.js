@@ -91,7 +91,7 @@ export default function Space1(){
           <h4 className={classes.textCenter}><span className={classes.stextcenter}>SELECT YOUR COUNTRY</span></h4>
           <p className={classes.red}>select country to book exibition space</p>
 
-          <select
+         <center> <select
                 className={classes.textInput}
      
               >
@@ -367,7 +367,7 @@ export default function Space1(){
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
               </select>
-
+              </center>
               <h4 className={classes.textCenter}><span className={classes.stextcenter}>CART TOTALS</span></h4>
               <center>
                   <h5>&#8358;1,440,000</h5>
