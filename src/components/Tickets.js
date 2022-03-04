@@ -1,5 +1,6 @@
 import * as React from "react";
 import { makeStyles } from '@material-ui/styles';
+import { Link } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -67,7 +68,7 @@ export default function Tickets(props) {
         <h4 className={classes.left}>{props.ticketLprice}</h4>
       </CardContent>
       <CardActions>
-        <Button className={classes.button} variant="outlined" size="small">Reserve now</Button>
+       <Link to="/{props.link}"> <Button className={classes.button} variant="outlined" size="small">Reserve now</Button></Link>
       </CardActions>
     </div>
   );
